@@ -1,0 +1,42 @@
+import ROAD_HERON_BLACK_1 from './HERON_BLACK_1.png';
+import ROAD_HERON_BLACK_2 from './HERON_BLACK_2.jpg';
+import ROAD_HERON_BLACK_3 from './HERON_BLACK_3.jpg';
+import ROAD_HERON_BLACK_4 from './HERON_BLACK_4.jpg';
+
+import ROAD_HERON_BLANC_1 from './ROAD_HERON_BLANC_1.png';
+import ROAD_HERON_BLANC_2 from './ROAD_HERON_BLANC_2.jpeg';
+import ROAD_HERON_BLANC_3 from './ROAD_HERON_BLANC_3.jpeg';
+import ROAD_HERON_BLANC_4 from './ROAD_HERON_BLANC_4.jpeg';
+import ROAD_HERON_BLANC_5 from './ROAD_HERON_BLANC_5.jpeg';
+
+import ROAD_HERON_GREY_PRIZM_1 from './ROAD_HERON_GREY_PRIZM_1.png';
+import ROAD_HERON_GREY_PRIZM_2 from './ROAD_HERON_GREY_PRIZM_2.jpeg';
+import ROAD_HERON_GREY_PRIZM_3 from './ROAD_HERON_GREY_PRIZM_3.jpeg';
+import ROAD_HERON_GREY_PRIZM_4 from './ROAD_HERON_GREY_PRIZM_4.jpeg';
+
+
+
+export const images_qasques_ROAD_HERON_BLACK={
+    ROAD_HERON_BLACK_1,
+    ROAD_HERON_BLACK_2,
+    ROAD_HERON_BLACK_3,
+    ROAD_HERON_BLACK_4,
+}
+export const images_qasques_ROAD_HERON_BLANC={
+    ROAD_HERON_BLANC_1,
+    ROAD_HERON_BLANC_2,
+    ROAD_HERON_BLANC_3,
+    ROAD_HERON_BLANC_4,
+    ROAD_HERON_BLANC_5,
+}
+
+export const images_qasques_ROAD_HERON_GREY_PRIZM={
+    ROAD_HERON_GREY_PRIZM_1,
+    ROAD_HERON_GREY_PRIZM_2,
+    ROAD_HERON_GREY_PRIZM_3,
+    ROAD_HERON_GREY_PRIZM_4
+
+}
+export const images_qasques_ROAD_RACE={
+
+}
