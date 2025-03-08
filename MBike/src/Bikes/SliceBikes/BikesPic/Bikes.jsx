@@ -1,12 +1,12 @@
-import Agree1 from './Agree1'
-import Agree2 from './Agree2'
-import Agree3 from './Agree3'
-import Ams1 from './Ams1'
-import Ams2 from './Ams2'
-import Ams3 from './Ams3'
-import Hyde1 from './Hyde1'
-import Hyde2 from './Hyde2'
-import Hyde3 from './Hyde3'
+import Agree1 from './Agree1.jpg';
+import Agree2 from './Agree2.jpg'
+import Agree3 from './Agree3.jpg'
+import Ams1 from './Ams1.jpg'
+import Ams2 from './Ams2.jpg'
+import Ams3 from './Ams3.jpg'
+import Hyde1 from './Hyde1.jpg'
+import Hyde2 from './Hyde2.jpg'
+import Hyde3 from './Hyde3.jpg'
 
 export const Agree = {
     Agree1,

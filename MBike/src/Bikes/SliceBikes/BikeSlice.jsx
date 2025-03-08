@@ -1,6 +1,6 @@
 import { Agree , Ams , Hyde } from "./BikesPic/Bikes";
 import { createSlice } from "@reduxjs/toolkit";
-const initial = {
+const initialState = {
     MountainBike:{
         FullSuspension : {
             AMS :[
@@ -120,7 +120,7 @@ const initial = {
 }
 const BikeSlice = createSlice({
     name:"bike",
-    initial,
+    initialState,
     reducers : {
 
     }
