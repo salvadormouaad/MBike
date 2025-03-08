@@ -122,6 +122,7 @@ const BikeSlice = createSlice({
     name:"bike",
     initial,
     reducers : {
-        
+
     }
 })
+export default BikeSlice.reducer;
