@@ -14,6 +14,85 @@ import ROAD_HERON_GREY_PRIZM_2 from './ROAD_HERON_GREY_PRIZM_2.jpeg';
 import ROAD_HERON_GREY_PRIZM_3 from './ROAD_HERON_GREY_PRIZM_3.jpeg';
 import ROAD_HERON_GREY_PRIZM_4 from './ROAD_HERON_GREY_PRIZM_4.jpeg';
 
+import ROAD_RACE_YELLOW_1 from './ROAD_RACE_YELLOW_1.png';
+import ROAD_RACE_YELLOW_2 from './ROAD_RACE_YELLOW_2.jpg';
+import ROAD_RACE_YELLOW_3 from './ROAD_RACE_YELLOW_3.jpg';
+import ROAD_RACE_YELLOW_4 from './ROAD_RACE_YELLOW_4.png';
+import ROAD_RACE_YELLOW_5 from './ROAD_RACE_YELLOW_5.jpg';
+
+import ROAD_RACE_BLANC_1 from './ROAD_RACE_BLANC_1.png';
+import ROAD_RACE_BLANC_2 from './ROAD_RACE_BLANC_2.png';
+import ROAD_RACE_BLANC_3 from './ROAD_RACE_BLANC_3.png';
+import ROAD_RACE_BLANC_4 from './ROAD_RACE_BLANC_4.png';
+import ROAD_RACE_BLANC_5 from './ROAD_RACE_BLANC_5.png';
+
+
+import MTB_STATUS_X_BLACK_1 from './MTB_STATUS_X_BLACK_1.png';
+
+import MTB_STROVER_BLACK_1 from './MTB_STATUS_X_BLACK_1.png';
+import MTB_STROVER_BLACK_2 from './MTB_STROVER_BLACK_2.jpg';
+import MTB_STROVER_BLACK_3 from './MTB_STROVER_BLACK_3.jpg';
+import MTB_STROVER_BLACK_4 from './MTB_STROVER_BLACK_4.jpg';
+import MTB_STROVER_BLACK_5 from './MTB_STROVER_BLACK_5.jpg';
+
+import MTB_STROVER_BLANC_1 from './MTB_STROVER_BLANC_1.png';
+import MTB_STROVER_BLANC_2 from './MTB_STROVER_BLANC_2.jpeg';
+import MTB_STROVER_BLANC_3 from './MTB_STROVER_BLANC_3.jpeg';
+import MTB_STROVER_BLANC_4 from './MTB_STROVER_BLANC_4.jpeg';
+import MTB_STROVER_BLANC_5 from './MTB_STROVER_BLANC_5.jpeg';
+
+
+import MTB_TROOPER_BLACK_1 from './MTB_TROOPER_BLACK_1.png';
+import MTB_TROOPER_BLACK_2 from './MTB_TROOPER_BLACK_2.jpg';
+import MTB_TROOPER_BLACK_3 from './MTB_TROOPER_BLACK_3.jpg';
+import MTB_TROOPER_BLACK_4 from './MTB_TROOPER_BLACK_4.jpg';
+import MTB_TROOPER_BLACK_5 from './MTB_TROOPER_BLACK_5.jpg';
+
+
+import MTB_TROOPER_BLUE_1 from './MTB_TROOPER_BLUE_1.png';
+import MTB_TROOPER_BLUE_2 from './MTB_TROOPER_BLUE_2.jpg';
+import MTB_TROOPER_BLUE_3 from './MTB_TROOPER_BLUE_3.jpg';
+import MTB_TROOPER_BLUE_4 from './MTB_TROOPER_BLUE_4.jpg';
+import MTB_TROOPER_BLUE_5 from './MTB_TROOPER_BLUE_5.jpg';
+
+
+import MTB_FRISK_BLACK_1 from './MTB_FRISK_BLACK_1.png';
+import MTB_FRISK_BLACK_2 from './MTB_FRISK_BLACK_2.jpg';
+import MTB_FRISK_BLACK_3 from './MTB_FRISK_BLACK_3.jpg';
+import MTB_FRISK_BLACK_4 from './MTB_FRISK_BLACK_4.jpg';
+import MTB_FRISK_BLACK_5 from './MTB_FRISK_BLACK_5.jpg';
+
+import MTB_FRISK_RED_1 from './MTB_FRISK_RED_1.png';
+import MTB_FRISK_RED_2 from './MTB_FRISK_RED_2.jpg';
+import MTB_FRISK_RED_3 from './MTB_FRISK_RED_3.jpg';
+import MTB_FRISK_RED_4 from './MTB_FRISK_RED_4.jpg';
+import MTB_FRISK_RED_5 from './MTB_FRISK_RED_5.jpg';
+
+
+import MTB_OFFPATH_BLACK_1 from './MTB_OFFPATH_BLACK_1.png';
+import MTB_OFFPATH_BLACK_2 from './MTB_OFFPATH_BLACK_2.jpg';
+import MTB_OFFPATH_BLACK_3 from './MTB_OFFPATH_BLACK_3.jpg';
+import MTB_OFFPATH_BLACK_4 from './MTB_OFFPATH_BLACK_4.jpg';
+import MTB_OFFPATH_BLACK_5 from './MTB_OFFPATH_BLACK_5.jpg';
+
+import MTB_OFFPATH_GREEN_1 from './MTB_OFFPATH_GREEN_1.png';
+import MTB_OFFPATH_GREEN_2 from './MTB_OFFPATH_GREEN_2.jpg';
+import MTB_OFFPATH_GREEN_3 from './MTB_OFFPATH_GREEN_3.jpg';
+import MTB_OFFPATH_GREEN_4 from './MTB_OFFPATH_GREEN_4.jpg';
+import MTB_OFFPATH_GREEN_5 from './MTB_OFFPATH_GREEN_5.jpg';
+
+
+import MTB_STRAY_BLACK_1 from './MTB_STRAY_BLACK_1.png';
+import MTB_STRAY_BLACK_2 from './MTB_STRAY_BLACK_2.jpg';
+import MTB_STRAY_BLACK_3 from './MTB_STRAY_BLACK_3.jpg';
+import MTB_STRAY_BLACK_4 from './MTB_STRAY_BLACK_4.jpg';
+import MTB_STRAY_BLACK_5 from './MTB_STRAY_BLACK_5.jpg';
+
+import MTB_STRAY_ORANGE_1 from './MTB_STRAY_ORANGE_1.png';
+import MTB_STRAY_ORANGE_2 from './MTB_STRAY_ORANGE_2.jpg';
+import MTB_STRAY_ORANGE_3 from './MTB_STRAY_ORANGE_3.jpg';
+import MTB_STRAY_ORANGE_4 from './MTB_STRAY_ORANGE_4.jpg';
+import MTB_STRAY_ORANGE_5 from './MTB_STRAY_ORANGE_5.jpg';
 
 
 export const images_qasques_ROAD_HERON_BLACK={
@@ -37,6 +116,113 @@ export const images_qasques_ROAD_HERON_GREY_PRIZM={
     ROAD_HERON_GREY_PRIZM_4
 
 }
-export const images_qasques_ROAD_RACE={
+export const images_qasques_ROAD_RACE_YELLOW={
+    ROAD_RACE_YELLOW_1,
+    ROAD_RACE_YELLOW_2,
+    ROAD_RACE_YELLOW_3,
+    ROAD_RACE_YELLOW_4,
+    ROAD_RACE_YELLOW_5,
+
+}
+
+export const images_qasques_ROAD_RACE_BLANC={
+    ROAD_RACE_BLANC_1,
+    ROAD_RACE_BLANC_2,
+    ROAD_RACE_BLANC_3,
+    ROAD_RACE_BLANC_4,
+    ROAD_RACE_BLANC_5,
+}
+
+
+export const images_qasques_MTB_STATUS_X_BLACK={
+    MTB_STATUS_X_BLACK_1
+}
+
+export const images_qasques_MTB_STROVER_BLACK={
+    MTB_STROVER_BLACK_1,
+    MTB_STROVER_BLACK_2,
+    MTB_STROVER_BLACK_3,
+    MTB_STROVER_BLACK_4,
+    MTB_STROVER_BLACK_5,
+}
+
+
+export const images_qasques_MTB_STROVER_BLANC={
+    MTB_STROVER_BLANC_1,
+    MTB_STROVER_BLANC_2,
+    MTB_STROVER_BLANC_3,
+    MTB_STROVER_BLANC_4,
+    MTB_STROVER_BLANC_5,
+
+}
+
+export const images_qasques_MTB_TROOPER_BLACK={
+    MTB_TROOPER_BLACK_1,
+    MTB_TROOPER_BLACK_2,
+    MTB_TROOPER_BLACK_3,
+    MTB_TROOPER_BLACK_4,
+    MTB_TROOPER_BLACK_5,
+}
+
+
+export const images_qasques_MTB_TROOPER_BLUE={
+    MTB_TROOPER_BLUE_1,
+    MTB_TROOPER_BLUE_2,
+    MTB_TROOPER_BLUE_3,
+    MTB_TROOPER_BLUE_4,
+    MTB_TROOPER_BLUE_5,
+}
+
+
+export const images_qasques_MTB_FRISK_BLACK={
+    MTB_FRISK_BLACK_1,
+    MTB_FRISK_BLACK_2,
+    MTB_FRISK_BLACK_3,
+    MTB_FRISK_BLACK_4,
+    MTB_FRISK_BLACK_5,
+}
+
+export const images_qasques_MTB_FRISK_RED={
+    MTB_FRISK_RED_1,
+    MTB_FRISK_RED_2,
+    MTB_FRISK_RED_3,
+    MTB_FRISK_RED_4,
+    MTB_FRISK_RED_5,
+}
+
+export const images_qasques_MTB_OFFPATH_BLACK={
+    MTB_OFFPATH_BLACK_1,
+    MTB_OFFPATH_BLACK_2,
+    MTB_OFFPATH_BLACK_3,
+    MTB_OFFPATH_BLACK_4,
+    MTB_OFFPATH_BLACK_5,
+    
+}
+
+export const images_qasques_MTB_OFFPATH_GREEN={
+    MTB_OFFPATH_GREEN_1,
+    MTB_OFFPATH_GREEN_2,
+    MTB_OFFPATH_GREEN_3,
+    MTB_OFFPATH_GREEN_4,
+    MTB_OFFPATH_GREEN_5,
+}
+
+
+export const images_qasques_MTB_STRAY_BLACK={
+    MTB_STRAY_BLACK_1,
+    MTB_STRAY_BLACK_2,
+    MTB_STRAY_BLACK_3,
+    MTB_STRAY_BLACK_4,
+    MTB_STRAY_BLACK_5,
+    
+}
+
+
+export const images_qasques_MTB_STRAY_ORANGE={
+    MTB_STRAY_ORANGE_1,
+    MTB_STRAY_ORANGE_2,
+    MTB_STRAY_ORANGE_3,
+    MTB_STRAY_ORANGE_4,
+    MTB_STRAY_ORANGE_5,
 
 }
