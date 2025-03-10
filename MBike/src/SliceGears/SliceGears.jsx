@@ -25,6 +25,33 @@ import { images_qasques_MTB_OFFPATH_GREEN } from "./IMAGES_CASQUES/assets";
 import { images_qasques_MTB_STRAY_BLACK } from "./IMAGES_CASQUES/assets";
 import { images_qasques_MTB_STRAY_ORANGE } from "./IMAGES_CASQUES/assets";
 
+
+import { images_vetements_HOMME_MAILLOTS_BLUE } from "./IMAGES_CASQUES/assets";
+import { images_vetements_HOMME_MAILLOTS_BLACK } from "./IMAGES_CASQUES/assets";
+
+
+import { images_vetements_HOMME_PANTALON_BRETELLES_WHITE } from "./IMAGES_CASQUES/assets";
+import { images_vetements_HOMME_PANTALON_BRETELLES_BLACK } from "./IMAGES_CASQUES/assets";
+
+
+import { images_vetements_HOMME_SWEATS_TSHIRTS_BLACK } from "./IMAGES_CASQUES/assets";
+import { images_vetements_HOMME_SWEATS_TSHIRTS_PETROLE } from "./IMAGES_CASQUES/assets";
+
+import { images_vetements_HOMME_CASQUETTES_BASIQUES_BLACK } from "./IMAGES_CASQUES/assets";
+import { images_vetements_HOMME_CASQUETTES_BASIQUES_GRIS } from "./IMAGES_CASQUES/assets";
+
+
+import { images_vetements_FEMME_MAILLOTS_BLUE } from "./IMAGES_CASQUES/assets";
+import { images_vetements_FEMME_MAILLOTS_BLACK } from "./IMAGES_CASQUES/assets";
+
+import { images_vetements_FEMME_PANTALON_BRETELLES_WHITE } from "./IMAGES_CASQUES/assets";
+import { images_vetements_FEMME_PANTALON_BRETELLES_BLACK } from "./IMAGES_CASQUES/assets";
+
+import { images_vetements_FEMME_SWEATS_TSHIRTS_BLACK } from "./IMAGES_CASQUES/assets";
+import { images_vetements_FEMME_SWEATS_TSHIRTS_WHITE } from "./IMAGES_CASQUES/assets";
+
+
+
 const initVal = {
     qasques: {
         road: {
@@ -259,20 +286,216 @@ const initVal = {
     },
     vetements: {
         homme: {
-            maillots: [],
-            vestesgiletspochos: [],
-            pantalon_bretelles: [],
-            sous_vetehomemts: [],
-            sweats_tshirts: [],
-            casquettes_basiques: [],
+            maillots: [
+                {
+                    id: 1,
+                    title: "Maillot CUBE ROAD/XC X Factory Racing S/S",
+                    price: "70.95 EUR",
+                    colors: ["BLACK"],
+                    description: "Notre maillot à manches courtes CUBE Road/XC à la coupe athlétique et ajustée offre une grande liberté de mouvement au niveau des épaules. Grâce à la fermeture éclair sur toute la longueur à l'avant, il est facile à enfiler et à enlever. L'ourlet imprimé en silicone et le col préformé garantissent un maintien sûr sans laisser passer les courants d'air. Une poche latérale zippée étanche est cachée dans la poche arrière en 3 parties : pratique pour les objets de valeur tels que les billets de banque ou les smartphones.",
+                    caracteristiques: ["coupe ajustée","ourlet élastique adhérent","fermeture éclair sur toute la longueur","poche arrière en 3 parties avec soufflet d'extension","poche déperlante à l'arrière","tissu fonctionnel à séchage rapide","sans coutures au niveau des épaules","éléments réfléchissants"],
+                    couleur: 'BLUE',
+                    materiau: ["85 % polyester","15 % élasthanne"],
+                    taille: "XS-XXXL",
+                    images: images_vetements_HOMME_MAILLOTS_BLUE
+                },
+                {
+                    id: 2,
+                    title: "Maillot CUBE ROAD/XC TEAMLINE S/S",
+                    price: "70.95 EUR",
+                    colors: ["BLUE"],
+                    description: "Notre maillot à manches courtes CUBE Road/XC à la coupe athlétique et ajustée offre une grande liberté de mouvement au niveau des épaules. Grâce à la fermeture éclair sur toute la longueur à l'avant, il est facile à enfiler et à enlever. L'ourlet imprimé en silicone et le col préformé garantissent un maintien sûr sans laisser passer les courants d'air. Une poche latérale zippée étanche est cachée dans la poche arrière en 3 parties : pratique pour les objets de valeur tels que les billets de banque ou les smartphones.",
+                    caracteristiques: ["coupe ajustée","ourlet élastique adhérent","fermeture éclair sur toute la longueur","poche arrière en 3 parties avec soufflet d'extension","poche déperlante à l'arrière","tissu fonctionnel à séchage rapide","sans coutures au niveau des épaules","éléments réfléchissants"],
+                    couleur: 'BLACK',
+                    materiau: ["85 % polyester","15 % élasthanne"],
+                    taille: "XS-XXXL",
+                    images: images_vetements_HOMME_MAILLOTS_BLACK
+                },
+            ],
+            pantalon_bretelles: [
+                {
+                    id: 1,
+                    title: "CUBE ROAD/XC XC Suit",
+                    price: "199.95 EUR ",
+                    colors: ["BLACK"],
+                    description: "Constructed from a durable fabric blend, the CUBE XC Suit is designed especially to meet the rigours of cross country racing and the perfect choice for demanding racers. Harder-wearing shorts are combined with a gilet-style top and the zip opens further than on a standard jersey for maximum ventilation in the heat of competition. A practical highlight is the mesh layer over the rear pocket for slotting in your race number. The shorts come with the CUBE Team Pad chamois for the same unparalleled comfort offered by our Pro Bib Shorts.",
+                    caracteristiques: ["Race Suit designed for cross country","breathable and quick drying","durable material bland","3-part rear pocket for race nutrition","CUBE Team Pad – made in Italy"],
+                    couleur: "WHITE",
+                    materiau: ["85 % polyester","15 % élasthanne"],
+                    taille: "XS-XXXL",
+                    images: images_vetements_HOMME_PANTALON_BRETELLES_WHITE
+                },
+                {
+                    id: 2,
+                    title: "CUBE ROAD/XC Bib Shorts",
+                    price: "99.95 EUR",
+                    colors: ["WHITE"],
+                    description: "Constructed from a durable fabric blend, the CUBE XC Suit is designed especially to meet the rigours of cross country racing and the perfect choice for demanding racers. Harder-wearing shorts are combined with a gilet-style top and the zip opens further than on a standard jersey for maximum ventilation in the heat of competition. A practical highlight is the mesh layer over the rear pocket for slotting in your race number. The shorts come with the CUBE Team Pad chamois for the same unparalleled comfort offered by our Pro Bib Shorts.",
+                    caracteristiques: ["Race Suit designed for cross country","breathable and quick drying","durable material bland","3-part rear pocket for race nutrition","CUBE Team Pad – made in Italy"],
+                    couleur: "BLACK",
+                    materiau: ["85 % polyester","15 % élasthanne"],
+                    taille: "XS-XXXL",
+                    images: images_vetements_HOMME_PANTALON_BRETELLES_BLACK
+                }
+            ],
+            sweats_tshirts: [
+                {
+                    id: 1,
+                    title: "T-shirt biologique CUBE Vert Session GTY FIT",
+                    price: "50.OO EUR",
+                    colors: ["PETROLE"],
+                    description: "Un design décontracté et ample rencontre du coton biologique doux dans ce t-shirt à coupe gravity. Vous n'avez pas besoin de courir pour le porter, mais nous pensons qu'il est parfait pour ces vibrations d'après-course et suffisamment élégant pour être porté partout où vous voulez montrer votre amour pour CUBE.",
+                    caracteristiques: ["tissu confortable","coton biologique","petit logo brodé sur le devant","taille du mannequin 182 cm","le mannequin porte une taille M"],
+                    couleur: 'BLACK',
+                    materiau: ["100% organic cotton"],
+                    taille: "XS -XXXL",
+                    images: images_vetements_HOMME_SWEATS_TSHIRTS_BLACK
+                },
+                {
+                    id: 2,
+                    title: "T-shirt biologique CUBE Trail Proven GTY FIT",
+                    price: "50.OO EUR",
+                    colors: ["BLACK"],
+                    description: "Un design décontracté et ample rencontre du coton biologique doux dans ce t-shirt à coupe gravity. Vous n'avez pas besoin de courir pour le porter, mais nous pensons qu'il est parfait pour ces vibrations d'après-course et suffisamment élégant pour être porté partout où vous voulez montrer votre amour pour CUBE.",
+                    caracteristiques: ["tissu confortable","coton biologique","petit logo brodé sur le devant","taille du mannequin 182 cm","le mannequin porte une taille M"],
+                    couleur: 'PETROLE',
+                    materiau: ["100% organic cotton"],
+                    taille: "XS -XXXL",
+                    images: images_vetements_HOMME_SWEATS_TSHIRTS_PETROLE
+                }
+            ],
+            casquettes_basiques: [
+                {
+                    id: 1,
+                    title: "CUBE Trail Builder Hat",
+                    price: "20.00 EUR",
+                    colors: ["GRIS"],
+                    description: "The CUBE Trail Builder Hat is your ideal companion whilst shaping new trails for you and your friends. With its robust material and stylish design, it is ideal for track walks & a cold drink afterwards!",
+                    caracteristiques: ["logo patch","adjustable strap"],
+                    couleur: 'BLACK',
+                    materiau: ["55 % coton biologique","45 % polyester recyclé"],
+                    taille: "one size",
+                    images: images_vetements_HOMME_CASQUETTES_BASIQUES_BLACK
+                },
+                {
+                    id: 2,
+                    title: "Chapeau bob CUBE",
+                    price: "20.00 EUR",
+                    colors: ["BLACK"],
+                    description: "The CUBE Trail Builder Hat is your ideal companion whilst shaping new trails for you and your friends. With its robust material and stylish design, it is ideal for track walks & a cold drink afterwards!",
+                    caracteristiques: ["logo patch","adjustable strap"],
+                    couleur: 'GRIS',
+                    materiau: ["55 % coton biologique","45 % polyester recyclé"],
+                    taille: "one size",
+                    images: images_vetements_HOMME_CASQUETTES_BASIQUES_GRIS
+                }
+            ],
         },
         femme: {
-            maillots: [],
-            vestesgiletspochos: [],
-            pantalon_bretelles: [],
-            sous_vetehomemts: [],
-            sweats_tshirts: [],
-            casquettes_basiques: [],
+            maillots: [
+                {
+                    id: 1,
+                    title: "Maillot CUBE ROAD/XC X Factory Racing S/S",
+                    price: "70.95 EUR",
+                    colors: ["BLACK"],
+                    description: "Notre maillot à manches courtes CUBE Road/XC à la coupe athlétique et ajustée offre une grande liberté de mouvement au niveau des épaules. Grâce à la fermeture éclair sur toute la longueur à l'avant, il est facile à enfiler et à enlever. L'ourlet imprimé en silicone et le col préformé garantissent un maintien sûr sans laisser passer les courants d'air. Une poche latérale zippée étanche est cachée dans la poche arrière en 3 parties : pratique pour les objets de valeur tels que les billets de banque ou les smartphones.",
+                    caracteristiques: ["coupe ajustée","ourlet élastique adhérent","fermeture éclair sur toute la longueur","poche arrière en 3 parties avec soufflet d'extension","poche déperlante à l'arrière","tissu fonctionnel à séchage rapide","sans coutures au niveau des épaules","éléments réfléchissants"],
+                    couleur: 'BLUE',
+                    materiau: ["85 % polyester","15 % élasthanne"],
+                    taille: "XS-XXXL",
+                    images: images_vetements_FEMME_MAILLOTS_BLUE
+                },
+                {
+                    id: 1,
+                    title: "Maillot CUBE ROAD/XC X Factory Racing S/S",
+                    price: "70.95 EUR",
+                    colors: ["BLUE"],
+                    description: "Notre maillot à manches courtes CUBE Road/XC à la coupe athlétique et ajustée offre une grande liberté de mouvement au niveau des épaules. Grâce à la fermeture éclair sur toute la longueur à l'avant, il est facile à enfiler et à enlever. L'ourlet imprimé en silicone et le col préformé garantissent un maintien sûr sans laisser passer les courants d'air. Une poche latérale zippée étanche est cachée dans la poche arrière en 3 parties : pratique pour les objets de valeur tels que les billets de banque ou les smartphones.",
+                    caracteristiques: ["coupe ajustée","ourlet élastique adhérent","fermeture éclair sur toute la longueur","poche arrière en 3 parties avec soufflet d'extension","poche déperlante à l'arrière","tissu fonctionnel à séchage rapide","sans coutures au niveau des épaules","éléments réfléchissants"],
+                    couleur: 'BLACK',
+                    materiau: ["85 % polyester","15 % élasthanne"],
+                    taille: "XS-XXXL",
+                    images: images_vetements_FEMME_MAILLOTS_BLACK
+                }
+            ],
+            pantalon_bretelles: [
+                {
+                    id: 1,
+                    title: "CUBE ROAD/XC WS Bib Shorts PRO",
+                    price: "199.95 EUR ",
+                    colors: ["BLACK"],
+                    description: "Constructed from a durable fabric blend, the CUBE XC Suit is designed especially to meet the rigours of cross country racing and the perfect choice for demanding racers. Harder-wearing shorts are combined with a gilet-style top and the zip opens further than on a standard jersey for maximum ventilation in the heat of competition. A practical highlight is the mesh layer over the rear pocket for slotting in your race number. The shorts come with the CUBE Team Pad chamois for the same unparalleled comfort offered by our Pro Bib Shorts.",
+                    caracteristiques: ["Race Suit designed for cross country","breathable and quick drying","durable material bland","3-part rear pocket for race nutrition","CUBE Team Pad – made in Italy"],
+                    couleur: "WHITE",
+                    materiau: ["85 % polyester","15 % élasthanne"],
+                    taille: "XS-XXXL",
+                    images: images_vetements_FEMME_PANTALON_BRETELLES_WHITE
+                },
+                {
+                    id: 2,
+                    title: "CUBE ROAD/XC WS Bib Shorts",
+                    price: "99.95 EUR",
+                    colors: ["WHITE"],
+                    description: "Constructed from a durable fabric blend, the CUBE XC Suit is designed especially to meet the rigours of cross country racing and the perfect choice for demanding racers. Harder-wearing shorts are combined with a gilet-style top and the zip opens further than on a standard jersey for maximum ventilation in the heat of competition. A practical highlight is the mesh layer over the rear pocket for slotting in your race number. The shorts come with the CUBE Team Pad chamois for the same unparalleled comfort offered by our Pro Bib Shorts.",
+                    caracteristiques: ["Race Suit designed for cross country","breathable and quick drying","durable material bland","3-part rear pocket for race nutrition","CUBE Team Pad – made in Italy"],
+                    couleur: "BLACK",
+                    materiau: ["85 % polyester","15 % élasthanne"],
+                    taille: "XS-XXXL",
+                    images: images_vetements_FEMME_PANTALON_BRETELLES_BLACK
+                }
+            ],
+            sweats_tshirts: [
+                {
+                    id: 1,
+                    title: "CUBE WS Zip Hoodie Advanced",
+                    price: "89.95 EUR",
+                    colors: ["WHITE"],
+                    description: "Un design décontracté et ample rencontre du coton biologique doux dans ce t-shirt à coupe gravity. Vous n'avez pas besoin de courir pour le porter, mais nous pensons qu'il est parfait pour ces vibrations d'après-course et suffisamment élégant pour être porté partout où vous voulez montrer votre amour pour CUBE.",
+                    caracteristiques: ["tissu confortable","coton biologique","petit logo brodé sur le devant","taille du mannequin 182 cm","le mannequin porte une taille M"],
+                    couleur: 'BLACK',
+                    materiau: ["100% organic cotton"],
+                    taille: "XS -XXXL",
+                    images: images_vetements_FEMME_SWEATS_TSHIRTS_BLACK
+                },
+                {
+                    id: 2,
+                    title: "CUBE Organic WS Sweater",
+                    price: "89.95 EUR",
+                    colors: ["BLACK"],
+                    description: "Un design décontracté et ample rencontre du coton biologique doux dans ce t-shirt à coupe gravity. Vous n'avez pas besoin de courir pour le porter, mais nous pensons qu'il est parfait pour ces vibrations d'après-course et suffisamment élégant pour être porté partout où vous voulez montrer votre amour pour CUBE.",
+                    caracteristiques: ["tissu confortable","coton biologique","petit logo brodé sur le devant","taille du mannequin 182 cm","le mannequin porte une taille M"],
+                    couleur: 'WHITE',
+                    materiau: ["100% organic cotton"],
+                    taille: "XS -XXXL",
+                    images: images_vetements_FEMME_SWEATS_TSHIRTS_WHITE
+                }
+            ],
+            casquettes_basiques: [
+                {
+                    id: 1,
+                    title: "CUBE Trail Builder Hat",
+                    price: "20.00 EUR",
+                    colors: ["GRIS"],
+                    description: "The CUBE Trail Builder Hat is your ideal companion whilst shaping new trails for you and your friends. With its robust material and stylish design, it is ideal for track walks & a cold drink afterwards!",
+                    caracteristiques: ["logo patch","adjustable strap"],
+                    couleur: 'BLACK',
+                    materiau: ["55 % coton biologique","45 % polyester recyclé"],
+                    taille: "one size",
+                    images: images_vetements_HOMME_CASQUETTES_BASIQUES_BLACK
+                },
+                {
+                    id: 2,
+                    title: "Chapeau bob CUBE",
+                    price: "20.00 EUR",
+                    colors: ["BLACK"],
+                    description: "The CUBE Trail Builder Hat is your ideal companion whilst shaping new trails for you and your friends. With its robust material and stylish design, it is ideal for track walks & a cold drink afterwards!",
+                    caracteristiques: ["logo patch","adjustable strap"],
+                    couleur: 'GRIS',
+                    materiau: ["55 % coton biologique","45 % polyester recyclé"],
+                    taille: "one size",
+                    images: images_vetements_HOMME_CASQUETTES_BASIQUES_GRIS
+                }
+            ],
         },
     },
     gants: {
