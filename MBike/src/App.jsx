@@ -1,8 +1,8 @@
 import './App.css'
-import Slide1 from './Components/Home/Slide1'
+import Home from './Pages/Home'
 function App() {
     return(
-        <Slide1/>
+        <Home/>
     )
 
 }
