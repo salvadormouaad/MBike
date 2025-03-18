@@ -1,1 +1,28 @@
-@import 'tailwindcss'
+@import 'tailwindcss';
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  
+  .carousel-track {
+    display: flex;
+    width: max-content;
+    animation: slide 150s linear infinite;
+  }
+
+
+  .carousel-slide {
+    flex: 0 0 auto;
+  }
+
+
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }

@@ -1,4 +1,5 @@
-import { Agree , Ams , Hyde } from "./BikesPic/Bikes";
+// import { Agree , Ams , Hyde } from ".../assets/BikesPic/Bikes";
+import { Agree , Ams , Hyde} from '../assets/BikesPic/Bikes'
 import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     MountainBike:{
