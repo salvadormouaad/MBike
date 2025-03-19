@@ -4,7 +4,7 @@ import Home from './home'
 import NavBar from './Navbar'
 import Slide1 from './Slide1'
 import TrustedBrands from './TrustedBrands'
-export default function homeoff() {
+export default function Homeoff() {
   return (
     <>
         <Home/>

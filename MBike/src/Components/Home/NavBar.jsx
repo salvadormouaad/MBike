@@ -8,7 +8,7 @@ import {
     menuIcon,
     rightArrow,
     closeIcon,
-} from "../constants";
+} from "../../constants/index";
 
 const NavBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);

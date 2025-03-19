@@ -1,8 +1,8 @@
-import React from 'react'
-import homeoff from '../Components/Home/homeoff'
-export default function () {
+import React from 'react';
+import Homeoff from '../Components/Home/homeoff'
+export default function Home () {
   return (
-    <homeoff/>
+    <Homeoff/>
   )
 }
 
