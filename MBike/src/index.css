@@ -1,5 +1,4 @@
-@import 'tailwindcss';
-@font-face {    font-family: "Gopher";    src: url("./assets/GopherText.ttf");}
+@import "tailwindcss";@font-face {    font-family: "Gopher";    src: url("./assets/GopherText.ttf");}.nav-section {    border-color: #3b3b3b;    user-select: none;    font-family: "Gopher", sans-serif;    font-optical-sizing: auto;    font-weight: 400;    font-style: normal;}.screen-max-width {    margin-inline-start: auto;    margin-inline-end: auto;    position: relative;    max-width: 1120px;}
 .carousel-container {
     width: 100%;
     overflow: hidden;
