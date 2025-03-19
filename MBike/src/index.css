@@ -1,11 +1,12 @@
 @import 'tailwindcss';
+@font-face {    font-family: "Gopher";    src: url("./assets/GopherText.ttf");}
 .carousel-container {
     width: 100%;
     overflow: hidden;
     position: relative;
   }
 
-  
+
   .carousel-track {
     display: flex;
     width: max-content;
