@@ -50,7 +50,20 @@ import { images_vetements_FEMME_PANTALON_BRETELLES_BLACK } from "./IMAGES_CASQUE
 import { images_vetements_FEMME_SWEATS_TSHIRTS_BLACK } from "./IMAGES_CASQUES/assets";
 import { images_vetements_FEMME_SWEATS_TSHIRTS_WHITE } from "./IMAGES_CASQUES/assets";
 
+import { images_gants_GRAVITY_OLIVE } from "./IMAGES_CASQUES/assets";
+import { images_gants_GRAVITY_BLUE } from "./IMAGES_CASQUES/assets";
 
+import { images_gants_RACE_BLANC } from "./IMAGES_CASQUES/assets";
+import { images_gants_RACE_BLACK } from "./IMAGES_CASQUES/assets";
+
+import { images_chaussures_MTB_PEACK_PRO_BLACK } from "./IMAGES_CASQUES/assets";
+
+import { images_chaussures_MTB_PEACK_BLACK } from "./IMAGES_CASQUES/assets";
+
+
+import { images_chaussures_ALL_TERRAIN_OX_PRO_GREY } from "./IMAGES_CASQUES/assets";
+
+import { images_chaussures_ALL_TERRAIN_OX_GREY } from "./IMAGES_CASQUES/assets";
 
 const initVal = {
     qasques: {
@@ -499,22 +512,119 @@ const initVal = {
         },
     },
     gants: {
-        gravity: [],
-        race: [],
-        cmpt: [],
-        rookie: []
+        gravity: [
+            {
+                    id: 1,
+                    title: "Gants CUBE Gravity à doigts longs TM",
+                    price: "50.00 EUR",
+                    colors: ["BLUE"],
+                    description: "Conçus pour des performances tout-terrain extrêmes : les gants à doigts longs CUBE Gravity. La partie supérieure durable est conçue pour résister aux rigueurs d'une conduite difficile, tandis que la paume ventilée et l'impression adhérente sur le bout des doigts offrent une prise ferme sur le guidon dans toutes les situations. Un revers ajusté et des bouts de doigts sans couture offrent un confort maximal pour que vous puissiez vous concentrer sur le sentier.",
+                    caracteristiques: ["matériau extérieur résistant","paume ventilée","manchette ajustée","bout des doigts avec imprimé adhérent","index avec fonction tactile","construction du bout des doigts sans couture"],
+                    couleur: 'OLIVE',
+                    materiau: ["main extérieure : 75 % polyester","15 % nylon","10 % élasthanne","paume : 90 % polyester","10 % élasthanne"],
+                    taille: "XS (6)-XXL (11)",
+                    images: images_gants_GRAVITY_OLIVE
+            },
+            {
+                    id: 2,
+                    title: "Gants CUBE Gravity à doigts longs X Actionteam",
+                    price: "50.00 EUR",
+                    colors: ["OLIVE"],
+                    description: "Conçus pour des performances tout-terrain extrêmes : les gants à doigts longs CUBE Gravity. La partie supérieure durable est conçue pour résister aux rigueurs d'une conduite difficile, tandis que la paume ventilée et l'impression adhérente sur le bout des doigts offrent une prise ferme sur le guidon dans toutes les situations. Un revers ajusté et des bouts de doigts sans couture offrent un confort maximal pour que vous puissiez vous concentrer sur le sentier.",
+                    caracteristiques: ["matériau extérieur résistant","paume ventilée","manchette ajustée","bout des doigts avec imprimé adhérent","index avec fonction tactile","construction du bout des doigts sans couture"],
+                    couleur: 'BLUE',
+                    materiau: ["main extérieure : 75 % polyester","15 % nylon","10 % élasthanne","paume : 90 % polyester","10 % élasthanne"],
+                    taille: "XS (6)-XXL (11)",
+                    images: images_gants_GRAVITY_BLUE
+            }
+        ],
+        race: [
+            {
+                    id: 1,
+                    title: "CUBE Gloves Race long finger",
+                    price: "34.95 EUR ",
+                    colors: ["BLACK"],
+                    description: "The CUBE Race long-finger gloves deliver comfort and grip in spades for ambitious off-road, gravel and on-road riders. With a breathable upper material, ventilated palm and seamless cuff, they are super comfy to wear. Grip prints on the fingertips improve handlebar contact, while touchscreen pads on the thumb make these a great smartphone-friendly option.",
+                    caracteristiques: ["matériau extérieur résistant","paume ventilée","manchette ajustée","bout des doigts avec imprimé adhérent","index avec fonction tactile","construction du bout des doigts sans couture"],
+                    couleur: 'BLANC',
+                    materiau: ["15 % nylon","10 % élasthanne","paume : 90 % polyester","10 % élasthanne"],
+                    taille: "XS (6)-XXL (11)",
+                    images: images_gants_RACE_BLANC
+            },
+            {
+                id: 2,
+                title: "CUBE Gloves Race long finger",
+                price: "34.95 EUR ",
+                colors: ["BLANC"],
+                description: "The CUBE Race long-finger gloves deliver comfort and grip in spades for ambitious off-road, gravel and on-road riders. With a breathable upper material, ventilated palm and seamless cuff, they are super comfy to wear. Grip prints on the fingertips improve handlebar contact, while touchscreen pads on the thumb make these a great smartphone-friendly option.",
+                caracteristiques: ["matériau extérieur résistant","paume ventilée","manchette ajustée","bout des doigts avec imprimé adhérent","index avec fonction tactile","construction du bout des doigts sans couture"],
+                couleur: 'BLACK',
+                materiau: ["15 % nylon","10 % élasthanne","paume : 90 % polyester","10 % élasthanne"],
+                taille: "XS (6)-XXL (11)",
+                images: images_gants_RACE_BLACK
+            }
+        ],
     },
     chaussures: {
-        road: {
-            sydrix: []
-        },
         mtb: {
-            peak_pro: [],
-            peak: [],
+            peak_pro: [
+                {
+                    id: 1,
+                    title: "CUBE Shoes MTB PEAK PRO",
+                    price: "149.95 EUR",
+                    colors: [""],
+                    description: "We think the MTB PEAK PRO is particularly special. It combines safety, wearability and stiffness in one shoe. With so many handy features packed into the Peak Pro, it's hard to know where to start. From the CUBE Protection Shield and CUBE Anti Slip System to the fibre-reinforced nylon outsole to reduce weight and add stiffness, this is a shoe you can depend on. The dirt-repellent upper keeps mud and dirt at bay, while the reflective heel details let the person behind know where you are at all times.",
+                    caracteristiques: ["disc closure","Natural Fit performance moulding","Natural Fit insole","asymmetric design for equal pressure distribution","CUBE Protection Shield"],
+                    couleur: 'BLACK',
+                    materiau: ["upper: PU","sole: fibre-reinforced nylon, rubber"],
+                    taille: ["EU 36-48",'UK 3-12.5','CM 22.5-31.5'],
+                    images: images_chaussures_MTB_PEACK_PRO_BLACK
+                }
+            ],
+            peak: [
+                {
+                    id: 1,
+                    title: "CUBE Shoes MTB PEAK",
+                    price: "109.95 EUR",
+                    colors: [""],
+                    description: "As one of the most important contact points between you and your bike, the MTB PEAK Shoe efficiently transfers every ounce of power to the bike. Not only does it look great, but the adjustable touch fastener with grip tab makes it super easy to find the perfect fit. The asymmetrical design prevents pressure spots from developing during long days in the saddle, while air holes deliver excellent climate control.",
+                    caracteristiques: ["disc closure","Natural Fit performance moulding","Natural Fit insole","asymmetric design for equal pressure distribution","CUBE Protection Shield"],
+                    couleur: 'BLACK',
+                    materiau: ["upper: PU | sole: fibre-reinforced nylon, rubber"],
+                    taille: ["EU 36-48",'UK 3-12.5','CM 22.5-31.5'],
+                    images: images_chaussures_MTB_PEACK_BLACK
+            }
+        ],
         },
         all_terrain: {
-            ox_pro: [],
-            ox: []
+            ox_pro: [
+                {
+                    id: 1,
+                    title: "CUBE Shoes ATX OX PRO",
+                    price: "149.95 EUR",
+                    colors: [""],
+                    description: "Stand out from the crowd with the ATX OX PRO's distinctive combination of form, colour and materials. The knitted upper, mesh material and ventilation holes not only culminate in an eye-catching and super-stylish design, they also ensure perfect climate control. And the disc closure makes it easy to slip them on and off and make adjustments on the fly. Segue seamlessly from on the bike to off it, with the ATX OX PRO!",
+                    caracteristiques: ["disc closure","Natural Fit performance moulding","Natural Fit insole","asymmetric design for equal pressure distribution","CUBE Protection Shield"],
+                    couleur: 'GREY',
+                    materiau: ["upper: mesh, PU","sole: EVA, rubber, nylon"],
+                    taille: ["EU 36-48",'UK 3-12.5','CM 22.5-31.5'],
+                    images: images_chaussures_ALL_TERRAIN_OX_PRO_GREY
+                }
+            ],
+            ox: [
+                {
+                    id: 1,
+                    title: "CUBE Shoes ATX OX",
+                    price: "99.95 EUR",
+                    colors: [""],
+                    description: "La marque CUBE est synonyme de produits innovants et de haute qualité qui sont toujours orientés sur les tendances actuelles. Les produits sont parfaitement ajustés les uns aux autres par la coopération étroite des designers dans le développement des accessoires et des vélos et engendrent ainsi la meilleure combinaison en matière de design, de technique et d’utilisabilité.",
+                    caracteristiques: ["disc closure","Natural Fit performance moulding","Natural Fit insole","asymmetric design for equal pressure distribution","CUBE Protection Shield"],
+                    couleur: 'GREY',
+                    materiau: ["upper: mesh, PU","sole: EVA, rubber, nylon"],
+                    taille: ["EU 36-48",'UK 3-12.5','CM 22.5-31.5'],
+                    images: images_chaussures_ALL_TERRAIN_OX_GREY
+                }
+            ]
         },
     }
 };

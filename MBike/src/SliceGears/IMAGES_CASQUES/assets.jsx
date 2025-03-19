@@ -175,6 +175,63 @@ import FEMME_SWEATS_TSHIRTS_WHITE_4 from './FEMME_SWEATS_TSHIRTS_WHITE_4.png';
 
 
 
+import GRAVITY_OLIVE_1 from './GRAVITY_OLIVE_1.png';
+import GRAVITY_OLIVE_2 from './GRAVITY_OLIVE_2.png';
+import GRAVITY_OLIVE_3 from './GRAVITY_OLIVE_3.png';
+import GRAVITY_OLIVE_4 from './GRAVITY_OLIVE_4.png';
+import GRAVITY_OLIVE_5 from './GRAVITY_OLIVE_5.png';
+
+
+import GRAVITY_BLUE_1 from './GRAVITY_BLUE_1.png';
+import GRAVITY_BLUE_2 from './GRAVITY_BLUE_2.png';
+import GRAVITY_BLUE_3 from './GRAVITY_BLUE_3.png';
+import GRAVITY_BLUE_4 from './GRAVITY_BLUE_4.png';
+import GRAVITY_BLUE_5 from './GRAVITY_BLUE_5.png';
+
+
+import RACE_BLANC_1 from './RACE_BLANC_1.png';
+import RACE_BLANC_2 from './RACE_BLANC_2.png';
+import RACE_BLANC_3 from './RACE_BLANC_3.jpg';
+import RACE_BLANC_4 from './RACE_BLANC_4.jpg';
+
+
+import RACE_BLACK_1 from './RACE_BLACK_1.png';
+import RACE_BLACK_2 from './RACE_BLACK_2.png';
+import RACE_BLACK_3 from './RACE_BLACK_3.jpg';
+import RACE_BLACK_4 from './RACE_BLACK_4.jpg';
+import RACE_BLACK_5 from './RACE_BLACK_5.jpg';
+
+
+
+import MTB_PEACK_PRO_BLACK_1 from './MTB_PEACK_PRO_BLACK_1.png';
+import MTB_PEACK_PRO_BLACK_2 from './MTB_PEACK_PRO_BLACK_2.jpg';
+import MTB_PEACK_PRO_BLACK_3 from './MTB_PEACK_PRO_BLACK_3.jpg';
+import MTB_PEACK_PRO_BLACK_4 from './MTB_PEACK_PRO_BLACK_4.jpg';
+import MTB_PEACK_PRO_BLACK_5 from './MTB_PEACK_PRO_BLACK_5.jpg';
+
+
+import MTB_PEACK_BLACK_1 from './MTB_PEACK_BLACK_1.png';
+import MTB_PEACK_BLACK_2 from './MTB_PEACK_BLACK_2.jpg';
+import MTB_PEACK_BLACK_3 from './MTB_PEACK_BLACK_3.jpg';
+import MTB_PEACK_BLACK_4 from './MTB_PEACK_BLACK_4.jpg';
+import MTB_PEACK_BLACK_5 from './MTB_PEACK_BLACK_5.jpg';
+
+
+import ALL_TERRAIN_OX_PRO_GREY_1 from './ALL_TERRAIN_OX_PRO_GREY_1.png';
+import ALL_TERRAIN_OX_PRO_GREY_2 from './ALL_TERRAIN_OX_PRO_GREY_2.jpg';
+import ALL_TERRAIN_OX_PRO_GREY_3 from './ALL_TERRAIN_OX_PRO_GREY_3.jpg';
+import ALL_TERRAIN_OX_PRO_GREY_4 from './ALL_TERRAIN_OX_PRO_GREY_4.jpg';
+import ALL_TERRAIN_OX_PRO_GREY_5 from './ALL_TERRAIN_OX_PRO_GREY_5.jpg';
+
+
+import ALL_TERRAIN_OX_GREY_1 from './ALL_TERRAIN_OX_GREY_1.png';
+import ALL_TERRAIN_OX_GREY_2 from './ALL_TERRAIN_OX_GREY_2.jpg';
+import ALL_TERRAIN_OX_GREY_3 from './ALL_TERRAIN_OX_GREY_3.jpg';
+import ALL_TERRAIN_OX_GREY_4 from './ALL_TERRAIN_OX_GREY_4.jpg';
+import ALL_TERRAIN_OX_GREY_5 from './ALL_TERRAIN_OX_GREY_5.jpg';
+
+
+
 export const images_qasques_ROAD_HERON_BLACK={
     ROAD_HERON_BLACK_1,
     ROAD_HERON_BLACK_2,
@@ -410,4 +467,69 @@ export const images_vetements_FEMME_SWEATS_TSHIRTS_WHITE={
     FEMME_SWEATS_TSHIRTS_WHITE_2,
     FEMME_SWEATS_TSHIRTS_WHITE_3,
     FEMME_SWEATS_TSHIRTS_WHITE_4,
+}
+
+export const images_gants_GRAVITY_OLIVE={
+    GRAVITY_OLIVE_1,
+    GRAVITY_OLIVE_2,
+    GRAVITY_OLIVE_3,
+    GRAVITY_OLIVE_4,
+    GRAVITY_OLIVE_5,
+}   
+
+export const images_gants_GRAVITY_BLUE={
+    GRAVITY_BLUE_1,
+    GRAVITY_BLUE_2,
+    GRAVITY_BLUE_3,
+    GRAVITY_BLUE_4,
+    GRAVITY_BLUE_5,
+}
+
+export const images_gants_RACE_BLANC={
+    RACE_BLANC_1,
+    RACE_BLANC_2,
+    RACE_BLANC_3,
+    RACE_BLANC_4
+}
+
+export const images_gants_RACE_BLACK={
+    RACE_BLACK_1,
+    RACE_BLACK_2,
+    RACE_BLACK_3,
+    RACE_BLACK_4,
+    RACE_BLACK_5,
+}
+
+
+export const images_chaussures_MTB_PEACK_PRO_BLACK={
+    MTB_PEACK_PRO_BLACK_1,
+    MTB_PEACK_PRO_BLACK_2,
+    MTB_PEACK_PRO_BLACK_3,
+    MTB_PEACK_PRO_BLACK_4,
+    MTB_PEACK_PRO_BLACK_5
+}
+
+
+export const images_chaussures_MTB_PEACK_BLACK={
+    MTB_PEACK_BLACK_1,
+    MTB_PEACK_BLACK_2,
+    MTB_PEACK_BLACK_3,
+    MTB_PEACK_BLACK_4,
+    MTB_PEACK_BLACK_5,
+}
+export const images_chaussures_ALL_TERRAIN_OX_PRO_GREY={
+    ALL_TERRAIN_OX_PRO_GREY_1,
+    ALL_TERRAIN_OX_PRO_GREY_2,
+    ALL_TERRAIN_OX_PRO_GREY_3,
+    ALL_TERRAIN_OX_PRO_GREY_4,
+    ALL_TERRAIN_OX_PRO_GREY_5,
+}
+
+
+export const images_chaussures_ALL_TERRAIN_OX_GREY={
+    ALL_TERRAIN_OX_GREY_1,
+    ALL_TERRAIN_OX_GREY_2,
+    ALL_TERRAIN_OX_GREY_3,
+    ALL_TERRAIN_OX_GREY_4,
+    ALL_TERRAIN_OX_GREY_5,
 }
