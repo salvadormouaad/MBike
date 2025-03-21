@@ -14,10 +14,14 @@ import Carde8 from './carde8';
 import Carde9 from './carde9';
 import Carde10 from './carde10';
 import TrustedBrands from './TrustedBrands';
+import Section_Qasques from './Section_Catalogue/Section_Qasques';
+import Section_Vetements from './Section_Catalogue/Section_Vetements';
+import Section_Gants from './Section_Catalogue/Section_Gants';
+import Section_Chaussures from './Section_Catalogue/Section_Chaussures';
 
 
 createRoot(document.getElementById('root')).render(
     <Provider store={StoreGlobal}>
-        <TrustedBrands/>
+        <Section_Chaussures/>
     </Provider>
 )
