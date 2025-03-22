@@ -1,23 +1,24 @@
-import React, {  useRef } from "react";
+import React, { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-//import { brands } from "../constants";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Carde1 from "./carde1";
-import Carde2 from "./carde2";
-import Carde3 from "./carde3";
-import Carde4 from "./carde4";
-import Carde5 from "./carde5";
-import Carde6 from "./carde6";
-import Carde7 from "./carde7";
-import Carde10 from "./carde10";
-import Carde9 from "./carde9";
-import Carde8 from "./carde8";
+import Carde1 from "./cards/carde1";
+import Carde2 from "./cards/carde2";
+import Carde3 from "./cards/carde3";
+import Carde4 from "./cards/carde4";
+import Carde5 from "./cards/carde5";
+import Carde6 from "./cards/carde6";
+import Carde7 from "./cards/carde7";
+import Carde10 from "./cards/carde10";
+import Carde9 from "./cards/carde9";
+import Carde8 from "./cards/carde8";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
+
 const TrustedBrands = () => {
     const marqueeRef = useRef(null);
     const animationRef = useRef(null);
+
     useGSAP(() => {
         gsap.from("#brands-title", {
             opacity: 0,
@@ -30,6 +31,7 @@ const TrustedBrands = () => {
             },
         });
     }, []);
+
     useGSAP(() => {
         const marquee = marqueeRef.current;
         const totalWidth = marquee.scrollWidth / 2;
@@ -45,7 +47,7 @@ const TrustedBrands = () => {
             },
         });
 
-        // stop the animation when hovering
+        // Stop the animation when hovering
         const handleMouseEnter = () => animationRef.current.pause();
         const handleMouseLeave = () => animationRef.current.resume();
 
@@ -61,11 +63,11 @@ const TrustedBrands = () => {
     }, []);
 
     return (
-        <section className="py-12 bg-white h-[400px]">
-            <div className="text-center mb-12">
+        <section className=" bg-white " > {/* Removed `py-12` and replaced with `pb-12` */}
+            <div className="text-center mb-1">
                 <h2
                     className="text-3xl md:text-4xl font-bold text-gray-800"
-                    id="brands-title"
+
                 >
                     Many Types Of Gears For Your Bike
                 </h2>
@@ -76,100 +78,35 @@ const TrustedBrands = () => {
                     ref={marqueeRef}
                     className="w-full h-full flex whitespace-nowrap"
                 >
-                    <div  key={`duplicate-${0}`}
-                            
-                            width={150}
-                            height={150}
-                            alt={`Brand ${0 + 1}`}
-                            className="mx-10 grayscale hover:grayscale-0 transition-all duration-300">
-                                <Carde1/>
+                    <div key={`duplicate-${0}`} className="mx-10 grayscale hover:grayscale-0 transition-all duration-300">
+                        <Carde1 />
                     </div>
-
-                    <div  key={`duplicate-${1}`}
-                            
-                            width={150}
-                            height={150}
-                            alt={`Brand ${1+ 1}`}
-                            className="mx-10 grayscale hover:grayscale-0 transition-all duration-300">
-                                <Carde2/>
+                    <div key={`duplicate-${1}`} className="mx-10 grayscale hover:grayscale-0 transition-all duration-300">
+                        <Carde2 />
                     </div>
-
-
-                    <div  key={`duplicate-${2}`}
-                            
-                            width={150}
-                            height={150}
-                            alt={`Brand ${2+ 1}`}
-                            className="mx-10 grayscale hover:grayscale-0 transition-all duration-300">
-                                <Carde3/>
+                    <div key={`duplicate-${2}`} className="mx-10 grayscale hover:grayscale-0 transition-all duration-300">
+                        <Carde3 />
                     </div>
-
-                    <div  key={`duplicate-${3}`}
-                            
-                            width={150}
-                            height={150}
-                            alt={`Brand ${3+ 1}`}
-                            className="mx-10 grayscale hover:grayscale-0 transition-all duration-300">
-                                <Carde4/>
+                    <div key={`duplicate-${3}`} className="mx-10 grayscale hover:grayscale-0 transition-all duration-300">
+                        <Carde4 />
                     </div>
-
-                    <div  key={`duplicate-${4}`}
-                            
-                            width={150}
-                            height={150}
-                            alt={`Brand ${4+ 1}`}
-                            className="mx-10 grayscale hover:grayscale-0 transition-all duration-300">
-                                <Carde5/>
+                    <div key={`duplicate-${4}`} className="mx-10 grayscale hover:grayscale-0 transition-all duration-300">
+                        <Carde5 />
                     </div>
-                    
-
-                    <div  key={`duplicate-${5}`}
-                            
-                            width={150}
-                            height={150}
-                            alt={`Brand ${5+ 1}`}
-                            className="mx-10 grayscale hover:grayscale-0 transition-all duration-300">
-                                <Carde6/>
+                    <div key={`duplicate-${5}`} className="mx-10 grayscale hover:grayscale-0 transition-all duration-300">
+                        <Carde6 />
                     </div>
-
-
-                    <div  key={`duplicate-${6}`}
-                            
-                            width={150}
-                            height={150}
-                            alt={`Brand ${6+ 1}`}
-                            className="mx-10 grayscale hover:grayscale-0 transition-all duration-300">
-                                <Carde7/>
+                    <div key={`duplicate-${6}`} className="mx-10 grayscale hover:grayscale-0 transition-all duration-300">
+                        <Carde7 />
                     </div>
-
-
-                    <div  key={`duplicate-${7}`}
-                            
-                            width={150}
-                            height={150}
-                            alt={`Brand ${7+ 1}`}
-                            className="mx-10 grayscale hover:grayscale-0 transition-all duration-300">
-                                <Carde8/>
+                    <div key={`duplicate-${7}`} className="mx-10 grayscale hover:grayscale-0 transition-all duration-300">
+                        <Carde8 />
                     </div>
-
-
-                    <div  key={`duplicate-${8}`}
-                            
-                            width={150}
-                            height={150}
-                            alt={`Brand ${8+ 1}`}
-                            className="mx-10 grayscale hover:grayscale-0 transition-all duration-300">
-                                <Carde9/>
+                    <div key={`duplicate-${8}`} className="mx-10 grayscale hover:grayscale-0 transition-all duration-300">
+                        <Carde9 />
                     </div>
-
-
-                    <div  key={`duplicate-${9}`}
-                            
-                            width={150}
-                            height={150}
-                            alt={`Brand ${9+ 1}`}
-                            className="mx-10 grayscale hover:grayscale-0 transition-all duration-300">
-                                <Carde10/>
+                    <div key={`duplicate-${9}`} className="mx-10 grayscale hover:grayscale-0 transition-all duration-300">
+                        <Carde10 />
                     </div>
                 </div>
             </div>

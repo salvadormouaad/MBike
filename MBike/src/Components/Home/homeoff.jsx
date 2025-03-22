@@ -4,6 +4,7 @@ import Home from './home'
 import NavBar from './Navbar'
 import Slide1 from './Slide1'
 import TrustedBrands from './TrustedBrands'
+import GearSlide from './gearsslide'
 export default function Homeoff() {
   return (
     <>
@@ -11,7 +12,9 @@ export default function Homeoff() {
         <NavBar/>
         <TrustedBrands/>
         <Slide1/>
+        <GearSlide/>
         <Footer/>
+
     </>
   )
 }
