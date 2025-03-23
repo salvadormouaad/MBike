@@ -18,10 +18,11 @@ import Section_Qasques from './Section_Catalogue/Section_Qasques';
 import Section_Vetements from './Section_Catalogue/Section_Vetements';
 import Section_Gants from './Section_Catalogue/Section_Gants';
 import Section_Chaussures from './Section_Catalogue/Section_Chaussures';
+import SlideGearsHome from './SlideGearsHome';
 
 
 createRoot(document.getElementById('root')).render(
     <Provider store={StoreGlobal}>
-        <Section_Chaussures/>
+        <SlideGearsHome/>
     </Provider>
 )
