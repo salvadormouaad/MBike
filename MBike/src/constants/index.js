@@ -21,7 +21,7 @@ import fuji from "../assets/images/fuji.svg";
 import merida from "../assets/images/merida.svg";
 import pinarello from "../assets/images/pinarello.svg";
 import santa_cruz from "../assets/images/santa-cruz.svg";
-
+import bike3 from "../assets/images/bike3.jpeg";
 // importing  NavIcons
 export const logo = react;
 export const searchImg = search;
@@ -31,6 +31,7 @@ export const heroImg = hero;
 export const menuIcon = menu;
 export const rightArrow = arrow;
 export const closeIcon = close;
+export const bikeSection = bike3;
 
 // brands logos
 export const brands = [

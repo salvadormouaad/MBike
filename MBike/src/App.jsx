@@ -3,15 +3,19 @@ import NavBar from "./components/Navbar";
 import TrustedBrands from "./components/TrustedBrands";
 import HeroSection from "./components/home";
 import Footer from "./components/Footer";
+import Section from "./components/section";
+import Test from "./components/test";
 
 function App() {
     return (
         <>
-            <div className="w-full min-h-screen overflow-x-hidden">
+            <div className=" w-full min-h-screen overflow-x-hidden">
                 <NavBar />
-                {<HeroSection />}
-                <TrustedBrands />
+                 {<HeroSection />}
 
+                <TrustedBrands />
+                <Section />
+                <TrustedBrands />
                 <Footer />
             </div>
         </>
