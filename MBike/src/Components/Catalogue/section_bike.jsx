@@ -1,6 +1,6 @@
 import React from "react";
+// import { Hyde } from "../../assets/BikesPic/Bikes";
 import { section_img } from "../../assets/BikesPic/Bikes";
-
 function Section() {
     console.log(section_img)
     return (
@@ -38,8 +38,10 @@ function Section() {
                     </a>
                 </div>
                 <div className="hidden w-full h-full lg:mt-0 lg:col-span-5 lg:flex">
-                    <img src={ section_img }alt="mockup" />
+
+                <img src={section_img.img_section} alt="mockup" />
                 </div>
+
             </div>
         </section>
     );
