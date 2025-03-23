@@ -1,10 +1,10 @@
 
 import './App.css'
-import BikeAboutTown from './composn contact/about'
+import Contact from './contact'
 function App() {
 
   return (  
-    <BikeAboutTown/>
+    <Contact/>
   )
 }
 
