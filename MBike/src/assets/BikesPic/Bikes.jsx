@@ -7,7 +7,7 @@ import Ams3 from './Ams3.jpg'
 import Hyde1 from './Hyde1.jpg'
 import Hyde2 from './Hyde2.jpg'
 import Hyde3 from './Hyde3.jpg'
-
+import img_section from './jonny-neuenhagen-B9c6qJJpNxY-unsplash.jpg'
 export const Agree = {
     Agree1,
     Agree2,
@@ -22,4 +22,7 @@ export const Hyde = {
     Hyde1,
     Hyde2,
     Hyde3,
+}
+export const section_img = {
+    img_section,
 }
