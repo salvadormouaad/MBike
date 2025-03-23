@@ -78,7 +78,10 @@ const NavBar = () => {
                                     0
                                 </span>
                             </div>
-                            <div className="sm:hidden mt-3" onClick={toggleMenu}>
+                            <div
+                                className="sm:hidden mt-3"
+                                onClick={toggleMenu}
+                            >
                                 <img
                                     src={isMenuOpen ? closeIcon : menuIcon}
                                     alt="menu"
@@ -96,16 +99,16 @@ const NavBar = () => {
 
             {/* Mobile Menu */}
             <ul
-                className={`w-full mt-10 sm:hidden bg-black overflow-hidden transition-all duration-900 ease-in-out transform ${
+                className={`w-full mt-24 fixed z-[100] sm:hidden bg-black overflow-hidden transition-all duration-900 ease-in-out transform ${
                     isMenuOpen
                         ? "min-h-dvh translate-x-0"
                         : "max-h-0 -translate-x-full"
-                } ${searchBar ? "blur-sm" : ""}`}
+                }`}
             >
                 <input
                     type="search"
                     placeholder="Search"
-                    className="w-full my-2 text-center text-white focus:border-none"
+                    className="w-full  mx-auto my-4 text-center text-white focus:border-none"
                 />
                 {navLists.map((item, i) => (
                     <li key={i} className="cursor-pointer" onClick={closeMenu}>
@@ -162,9 +165,9 @@ const NavBar = () => {
                             alt="close"
                             width={40}
                             height={40}
-                        className='absolute top-6 right-0 cursor-pointer' onClick={()=>setSearchBar(!searchBar)}
-                    />
-
+                            className="absolute top-6 right-0 cursor-pointer"
+                            onClick={() => setSearchBar(!searchBar)}
+                        />
                     </div>
                 </div>
             )}

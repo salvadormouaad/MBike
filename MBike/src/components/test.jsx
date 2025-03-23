@@ -367,10 +367,10 @@ const Test = () => {
             {/* Navigation */}
             <nav
                 ref={navRef}
-                className="fixed top-0 left-0 w-full z-50 px-6 sm:px-10 lg:px-16 py-8 flex justify-between items-center"
+                className="fixed top-0 left-0 w-full  z-50 px-6 sm:px-10 lg:px-16 py-8 flex justify-between items-center"
             >
                 <div className="font-bold text-xl tracking-tight text-white drop-shadow-lg">
-                    MOUNTAIN<span className="text-white/80">X</span>
+                    MOUNTAIN <span className="text-white/80">X</span>
                 </div>
                 <div className="flex items-center gap-8">
                     <a
@@ -463,7 +463,7 @@ const Test = () => {
                     >
                         {/* Manual character splitting for animation */}
                         <span className="inline-block overflow-hidden">
-                            {"MOUNTAIN".split("").map((char, i) => (
+                            {"MOUNTAIN DOMINATOR".split("").map((char, i) => (
                                 <span
                                     key={i}
                                     className="letter inline-block text-transparent bg-clip-text bg-gradient-to-r from-gray-100 via-white to-gray-300 drop-shadow-[0_6px_20px_rgba(0,0,0,0.6)]"
