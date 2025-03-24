@@ -8,18 +8,7 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 const TrustedBrands = () => {
     const marqueeRef = useRef(null);
     const animationRef = useRef(null);
-    useGSAP(() => {
-        gsap.from("#brands-title", {
-            opacity: 0,
-            y: 30,
-            delay: 0.4,
-            scrollTrigger: {
-                trigger: "#brands-title",
-                start: "top 80%",
-                toggleActions: "play none none reset",
-            },
-        });
-    }, []);
+
     useGSAP(() => {
         const marquee = marqueeRef.current;
         const totalWidth = marquee.scrollWidth / 2;

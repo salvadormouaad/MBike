@@ -1,7 +1,7 @@
 import React from "react";
 import { bikeSection } from "../constants";
 
-function Section() {
+function Section_Bikes() {
     return (
         <section className="bg-[#181a1e] min-h-[auto] py-8 lg:py-16 overflow-hidden">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
@@ -65,4 +65,4 @@ function Section() {
     );
 }
 
-export default Section;
+export default Section_Bikes;
