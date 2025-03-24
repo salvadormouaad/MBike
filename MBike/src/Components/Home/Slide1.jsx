@@ -26,8 +26,8 @@ export default function Slide1() {
   const carouselBikes = [...shuffledBikes, ...shuffledBikes];
 
   return (
-    <div className="p-4 sm:p-6 md:p-8 bg-gray-100 min-h-screen">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-10 md:mb-14 text-black tracking-tight">
+    <div className="p-4 sm:p-6 md:p-8 bg-gray-100 ">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-10 md:mb-14  text-black tracking-tight">
         <span className="block bg-clip-text text-transparent bg-gradient-to-r from-gray-800 to-gray-600">
           Explore Our Bikes Collection
         </span>

@@ -9,7 +9,7 @@
   .carousel-track {
     display: flex;
     width: max-content;
-    animation: slide 150s linear infinite;
+    animation: slide 180s linear infinite;
   }
 
 

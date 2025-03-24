@@ -1,5 +1,5 @@
 import React from "react";
-// import { Hyde } from "../../assets/BikesPic/Bikes";
+
 import { section_img } from "../../assets/BikesPic/Bikes";
 function Section() {
     console.log(section_img)

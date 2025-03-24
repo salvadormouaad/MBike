@@ -1,117 +1,100 @@
-import React, { useRef } from "react";
-import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Carde1 from "./cards/carde1";
-import Carde2 from "./cards/carde2";
-import Carde3 from "./cards/carde3";
-import Carde4 from "./cards/carde4";
-import Carde5 from "./cards/carde5";
-import Carde6 from "./cards/carde6";
-import Carde7 from "./cards/carde7";
-import Carde10 from "./cards/carde10";
-import Carde9 from "./cards/carde9";
-import Carde8 from "./cards/carde8";
+import React from 'react';
+import { useSelector } from 'react-redux';
+import '../../index.css';
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+export default function SlideGearsHome() {
+  const gears = useSelector((state) => state.gear);
 
-const TrustedBrands = () => {
-    const marqueeRef = useRef(null);
-    const animationRef = useRef(null);
+  const allGears = Object.values(gears).flatMap((category) =>
+    Object.values(category).flatMap((subCategory) =>
+      Object.values(subCategory).flat()
+    )
+  );
 
-    useGSAP(() => {
-        gsap.from("#brands-title", {
-            opacity: 0,
-            y: 30,
-            delay: 0.4,
-            scrollTrigger: {
-                trigger: "#brands-title",
-                start: "top 80%",
-                toggleActions: "play none none reset",
-            },
-        });
-    }, []);
 
-    useGSAP(() => {
-        const marquee = marqueeRef.current;
-        const totalWidth = marquee.scrollWidth / 2;
+  const shuffleArray = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  };
 
-        // Creating a GSAP animation
-        animationRef.current = gsap.to(marquee, {
-            x: -totalWidth,
-            duration: 35,
-            ease: "none",
-            repeat: -1,
-            modifiers: {
-                x: (x) => `${parseFloat(x) % totalWidth}px`,
-            },
-        });
+  const shuffledGears = shuffleArray([...allGears]);
 
-        // Stop the animation when hovering
-        const handleMouseEnter = () => animationRef.current.pause();
-        const handleMouseLeave = () => animationRef.current.resume();
 
-        marquee.addEventListener("mouseenter", handleMouseEnter);
-        marquee.addEventListener("mouseleave", handleMouseLeave);
+  const carouselGears = [...shuffledGears, ...shuffledGears];
 
-        // Cleanup the animation
-        return () => {
-            marquee.removeEventListener("mouseenter", handleMouseEnter);
-            marquee.removeEventListener("mouseleave", handleMouseLeave);
-            animationRef.current.kill();
-        };
-    }, []);
+  return (
+    <div className="p-4 sm:p-6 md:p-8 bg-gray-100 ">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-10 md:mb-14 text-black tracking-tight">
+        <span className="block bg-clip-text text-transparent bg-gradient-to-r from-gray-800 to-gray-600">
+          Explore Our Gears Collection
+        </span>
+      </h1>
 
-    return (
-        <section className=" bg-white " > {/* Removed `py-12` and replaced with `pb-12` */}
-            <div className="text-center mb-1">
-                <h2
-                    className="text-3xl md:text-4xl font-bold text-gray-800"
 
-                >
-                    Many Types Of Gears For Your Bike
-                </h2>
-            </div>
+      <div className="w-full overflow-hidden">
+        <div className="carousel-track flex animate-slide">
+          {/* Render the shuffled and duplicated bikes */}
+          {carouselGears.map((val, index) => (
+            <div
+              key={`${val.id}-${index}`}
+              className="carousel-slide flex-shrink-0 w-72 sm:w-80 md:w-96 bg-white rounded-3xl shadow-md overflow-hidden group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200 mx-4" // Added mx-4 for spacing between slides
+            >
+              <div className="relative h-56 sm:h-64 md:h-72 overflow-hidden">
+                <img
+                  src={val.images[0]}
+                  alt={`Bike ${val.id}`}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 grayscale group-hover:grayscale-0"
+                  loading="lazy"
+                />
 
-            <div className="overflow-hidden">
-                <div
-                    ref={marqueeRef}
-                    className="w-full h-full flex whitespace-nowrap"
-                >
-                    <div key={`duplicate-${0}`} className="mx-10 grayscale hover:grayscale-0 transition-all duration-300">
-                        <Carde1 />
-                    </div>
-                    <div key={`duplicate-${1}`} className="mx-10 grayscale hover:grayscale-0 transition-all duration-300">
-                        <Carde2 />
-                    </div>
-                    <div key={`duplicate-${2}`} className="mx-10 grayscale hover:grayscale-0 transition-all duration-300">
-                        <Carde3 />
-                    </div>
-                    <div key={`duplicate-${3}`} className="mx-10 grayscale hover:grayscale-0 transition-all duration-300">
-                        <Carde4 />
-                    </div>
-                    <div key={`duplicate-${4}`} className="mx-10 grayscale hover:grayscale-0 transition-all duration-300">
-                        <Carde5 />
-                    </div>
-                    <div key={`duplicate-${5}`} className="mx-10 grayscale hover:grayscale-0 transition-all duration-300">
-                        <Carde6 />
-                    </div>
-                    <div key={`duplicate-${6}`} className="mx-10 grayscale hover:grayscale-0 transition-all duration-300">
-                        <Carde7 />
-                    </div>
-                    <div key={`duplicate-${7}`} className="mx-10 grayscale hover:grayscale-0 transition-all duration-300">
-                        <Carde8 />
-                    </div>
-                    <div key={`duplicate-${8}`} className="mx-10 grayscale hover:grayscale-0 transition-all duration-300">
-                        <Carde9 />
-                    </div>
-                    <div key={`duplicate-${9}`} className="mx-10 grayscale hover:grayscale-0 transition-all duration-300">
-                        <Carde10 />
-                    </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-gray-900/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
+                  <h2 className="text-xl sm:text-2xl font-bold text-white drop-shadow-md line-clamp-1">
+                    {val.title}
+                  </h2>
+                  <p className="text-sm sm:text-base text-gray-300 drop-shadow-md">
+                    Gears ID: {val.id}
+                  </p>
                 </div>
-            </div>
-        </section>
-    );
-};
+              </div>
 
-export default TrustedBrands;
+              <div className="p-4 sm:p-6 bg-gray-50">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-sm text-gray-600 font-medium">
+                    {val.taille[0]} {val.materiau[0]
+                    }
+                  </span>
+                  <span className="text-sm text-gray-800 font-semibold">
+                    In Stock
+                  </span>
+                </div>
+
+                <button className="w-full bg-gradient-to-r from-gray-700 to-gray-900 text-white py-2.5 sm:py-3 px-6 rounded-xl hover:from-gray-800 hover:to-black transition-all duration-300 flex items-center justify-center shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
+                  <span className="text-sm sm:text-base font-medium mr-2">
+                    View Details
+                  </span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-4 w-4 sm:h-5 sm:w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
