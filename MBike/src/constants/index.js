@@ -1,4 +1,10 @@
-export const navLists = ["Home", "Bikes", "Gear", "About"];
+export const navLists = [
+    { name: "Home", path: "/" },
+    { name: "Bikes", path: "/bikes" },
+    { name: "Gear", path: "/gears" },
+    { name: "Catalog", path: "/catalog" },
+    { name: "About", path: "/about" },
+];
 
 import react from "../assets/images/react.svg";
 import hero from "../assets/images/bike background 2.png";

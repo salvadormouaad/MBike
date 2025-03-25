@@ -8,6 +8,7 @@ import {
     rightArrow,
     closeIcon,
 } from "../constants";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,19 +24,19 @@ const NavBar = () => {
                 >
                     <nav className="w-full flex screen-max-width">
                         <div className="pt-1 text-4xl cursor-pointer max-sm:mt-3">
-                            MBike
+                            <Link to={"/"}>MBike</Link>
                         </div>
 
                         {/* Desktop Menu */}
                         <ul className="flex flex-1 justify-center max-sm:hidden pt-2">
                             {navLists.map((item, i) => (
                                 <li key={i}>
-                                    <a
-                                        href="#"
+                                    <Link
+                                        to={item.path}
                                         className="px-5 text-lg cursor-pointer hover:underline text-gray hover:text-white transition-all"
                                     >
-                                        {item}
-                                    </a>
+                                        {item.name}
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
@@ -57,25 +58,29 @@ const NavBar = () => {
                                     Search
                                 </span>
                             </div>
-                            <img
-                                src={profileImg}
-                                alt="profile"
-                                width={30}
-                                height={30}
-                                className="mx-3"
-                            />
-                            <div className="relative">
+                            <Link to={"/profile"}>
                                 <img
-                                    src={bagImg}
-                                    alt="bag"
-                                    width={20}
-                                    height={20}
+                                    src={profileImg}
+                                    alt="profile"
+                                    width={30}
+                                    height={30}
                                     className="mx-3"
                                 />
-                                <span className="absolute top-0 right-1 font-serif text-white text-sm bg-red-700 rounded-xl px-1">
-                                    0
-                                </span>
-                            </div>
+                            </Link>
+                            <Link to={"/cart"}>
+                                <div className="relative">
+                                    <img
+                                        src={bagImg}
+                                        alt="bag"
+                                        width={20}
+                                        height={20}
+                                        className="mx-3"
+                                    />
+                                    <span className="absolute top-0 right-1 font-serif text-white text-sm bg-red-700 rounded-xl px-1">
+                                        0
+                                    </span>
+                                </div>
+                            </Link>
                             <div
                                 className="sm:hidden mt-3"
                                 onClick={toggleMenu}
@@ -97,7 +102,7 @@ const NavBar = () => {
 
             {/* Mobile Menu */}
             <ul
-                className={`w-full mt-24 fixed z-[100] sm:hidden bg-black overflow-hidden transition-all duration-900 ease-in-out transform ${
+                className={`w-full  fixed z-[100] sm:hidden bg-black overflow-hidden transition-all duration-900 ease-in-out transform ${
                     isMenuOpen
                         ? "min-h-dvh translate-x-0"
                         : "max-h-0 -translate-x-full"
@@ -111,12 +116,12 @@ const NavBar = () => {
                 {navLists.map((item, i) => (
                     <li key={i} className="cursor-pointer" onClick={closeMenu}>
                         <div className="flex justify-between">
-                            <a
-                                href="#"
+                            <Link
+                                to={item.path}
                                 className="pt-5 text-lg ml-6 font-sans font-light cursor-pointer text-white hover:text-gray-200 transition-all"
                             >
-                                {item}
-                            </a>
+                                {item.name}
+                            </Link>
                             <div>
                                 <img
                                     src={rightArrow}
@@ -134,7 +139,7 @@ const NavBar = () => {
 
             {/* Search Bar Overlay */}
             {searchBar && (
-                <div className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/50 ">
+                <div className="fixed inset-0 z-[10] flex items-center justify-center bg-black/50 ">
                     <div className="w-full max-w-4xl mx-4">
                         <div className="relative">
                             <input

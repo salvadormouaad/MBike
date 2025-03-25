@@ -9,12 +9,16 @@ export const Router = createBrowserRouter([
         element: <Layout />,
         children: [
             {
-                path: "/Home",
+                index: true,
                 element: <HomePage />,
             },
             {
-                path: "/products",
-                element: <p> upcoming Products Page </p>,
+                path: "/bikes",
+                element: <p> upcoming Bikes Page </p>,
+            },
+            {
+                path: "/gears",
+                element: <p> upcoming Gears Page </p>,
             },
             {
                 path: "/catalog",
@@ -29,7 +33,7 @@ export const Router = createBrowserRouter([
                 element: <p> upcoming Profile Page </p>,
             },
             {
-                path: "/Cart",
+                path: "/cart",
                 element: <p> upcoming Cart Page </p>,
             },
             {
