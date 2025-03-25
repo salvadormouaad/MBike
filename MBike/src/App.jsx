@@ -10,6 +10,7 @@ import Section_Gants from "./Section_Catalogue/Section_Gants";
 import Section_Qasques from "./Section_Catalogue/Section_Qasques";
 import Section_Vetements from "./Section_Catalogue/Section_Vetements";
 import Products from "./ProductsSlider/Products";
+import SlideGearsHome from "./SlideGearsHome";
 
 function App() {
     return (
@@ -19,25 +20,11 @@ function App() {
                 <HeroSection />
                 {/*  <Test /> */}
                 <Products />
-                <h1 className=" text-6xl text-black my-4 ml-7 border-l-6 pl-3 border-amber-950">
-                    Shoes
-                </h1>
+                <SlideGearsHome />
                 <Section_Chaussures />
-                <h1 className=" text-6xl text-black my-4 ml-7 border-l-6 pl-3 border-amber-950">
-                    GANTS
-                </h1>
                 <Section_Gants />
-                <h1 className=" text-6xl text-black my-4 ml-7 border-l-6 pl-3 border-amber-950">
-                    Bikes
-                </h1>
                 <Section_Bikes />
-                <h1 className=" text-6xl text-black my-4 ml-7 border-l-6 pl-3 border-amber-950">
-                    Helmets
-                </h1>
                 <Section_Qasques />
-                <h1 className=" text-6xl text-black my-4 ml-7 border-l-6 pl-3 border-amber-950">
-                    Clothes
-                </h1>
                 <Section_Vetements />
                 <TrustedBrands />
                 <Footer />

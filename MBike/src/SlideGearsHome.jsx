@@ -3,36 +3,25 @@ import { useSelector } from "react-redux";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
+// Only import what we need
 gsap.registerPlugin(useGSAP);
 
-export default function Products() {
+export default function SlideGearsHome() {
     const containerRef = useRef(null);
     const trackRef = useRef(null);
     const requestRef = useRef();
+    const gears = useSelector((state) => state.gear);
 
-    // Get all gear data from Redux
-    const gearData = useSelector((state) => state.gear);
-
-    // Extract and flatten all gear items from your specific Redux structure
-    const allGears = useMemo(() => {
-        const categories = [
-            gearData.qasques?.road?.heron || [],
-            gearData.qasques?.road?.road_race || [],
-            gearData.qasques?.mtb?.status_x || [],
-            gearData.vetements?.homme?.maillots || [],
-            gearData.vetements?.homme?.pantalon_bretelles || [],
-            gearData.qasques?.mtb?.stray || [],
-            gearData.vetements?.homme?.sweats_tshirts || [],
-            gearData.vetements?.homme?.casquettes_basiques || [],
-            gearData.vetements?.femme?.sweats_tshirts || [],
-            gearData.vetements?.femme?.maillots || [],
-        ];
-
-        return categories.flatMap((items) => items).filter(Boolean);
-    }, [gearData]);
-
-    // Shuffle and duplicate for infinite effect
+    // Memoized flattened gear data
     const carouselGears = useMemo(() => {
+        const flattenGears = () => {
+            return Object.values(gears).flatMap((category) =>
+                Object.values(category).flatMap((subCategory) =>
+                    Object.values(subCategory).flat()
+                )
+            );
+        };
+
         const shuffleArray = (array) => {
             const newArray = [...array];
             for (let i = newArray.length - 1; i > 0; i--) {
@@ -42,9 +31,10 @@ export default function Products() {
             return newArray;
         };
 
+        const allGears = flattenGears();
         const shuffled = shuffleArray(allGears);
         return [...shuffled, ...shuffled];
-    }, [allGears]);
+    }, [gears]);
 
     // Animation variables
     const animationProps = useRef({
@@ -135,7 +125,7 @@ export default function Products() {
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-800 to-gray-600">
-                            Many Types Of Gears For Your Bike
+                            Explore Our Gears Collection
                         </span>
                     </h2>
                     <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
@@ -168,7 +158,7 @@ export default function Products() {
                                             {gear.title}
                                         </h3>
                                         <p className="text-xs sm:text-sm text-gray-300">
-                                            {gear.category || "Gear"}
+                                            {gear.category}
                                         </p>
                                     </div>
                                 </div>
