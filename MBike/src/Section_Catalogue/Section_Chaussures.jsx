@@ -9,7 +9,7 @@ function Section_Chaussures() {
     return reduxChaussures.map((val, index) => {
         return (
             index === 0 && (
-                <div>
+                <div key={index}>
                     <div className="text-center my-16">
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
                             <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-800 to-gray-600">

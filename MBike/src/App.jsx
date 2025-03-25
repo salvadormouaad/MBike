@@ -10,7 +10,7 @@ import Section_Gants from "./Section_Catalogue/Section_Gants";
 import Section_Qasques from "./Section_Catalogue/Section_Qasques";
 import Section_Vetements from "./Section_Catalogue/Section_Vetements";
 import Products from "./ProductsSlider/Products";
-import SlideGearsHome from "./SlideGearsHome";
+import SlideBikesHome from "./BikesSlider/SlideBikesHome";
 
 function App() {
     return (
@@ -20,7 +20,7 @@ function App() {
                 <HeroSection />
                 {/*  <Test /> */}
                 <Products />
-                <SlideGearsHome />
+                <SlideBikesHome />
                 <Section_Chaussures />
                 <Section_Gants />
                 <Section_Bikes />

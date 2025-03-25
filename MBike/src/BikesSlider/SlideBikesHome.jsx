@@ -6,7 +6,7 @@ import { useGSAP } from "@gsap/react";
 // Only import what we need
 gsap.registerPlugin(useGSAP);
 
-export default function SlideGearsHome() {
+export default function SlideBikesHome() {
     const containerRef = useRef(null);
     const trackRef = useRef(null);
     const requestRef = useRef();
@@ -174,7 +174,7 @@ export default function SlideGearsHome() {
                                         </span>
                                     </div>
 
-                                    <button className="w-full flex items-center justify-center px-4 py-2 sm:px-5 sm:py-2.5 bg-gray-800 text-white font-medium rounded-lg hover:bg-gray-900 transition-colors duration-300">
+                                    <button className="w-full flex items-center justify-center px-4 py-2 sm:px-5 sm:py-2.5 bg-gray-800 text-white font-medium rounded-lg hover:bg-gray-900 transition-colors duration-300 cursor-pointer">
                                         <span className="mr-2 text-sm">
                                             View Details
                                         </span>
