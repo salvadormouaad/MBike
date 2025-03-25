@@ -1,5 +1,5 @@
 import React from "react";
-import { bikeSection } from "../constants";
+import { bikeSection } from "../../constants/index";
 
 function Section_Bikes() {
     return (

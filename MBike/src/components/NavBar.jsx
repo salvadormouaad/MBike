@@ -17,11 +17,9 @@ const NavBar = () => {
 
     return (
         <>
-            <div className="w-full fixed top-0 z-[100]">
+            <div className="w-full sticky top-0 z-[100] ">
                 <header
-                    className={`w-full py-5 sm:px-10 px-5 flex justify-between items-center relative text-white bg-black nav-section transition-all duration-300 ${
-                        searchBar ? "" : ""
-                    }`}
+                    className={`w-full py-5 sm:px-10 px-5 flex justify-between items-center relative text-white bg-black nav-section transition-all duration-300 `}
                 >
                     <nav className="w-full flex screen-max-width">
                         <div className="pt-1 text-4xl cursor-pointer max-sm:mt-3">

@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { gsap } from "gsap";
@@ -46,7 +45,7 @@ const Footer = () => {
     }, []);
 
     return (
-        <footer className="footer-container bg-black text-white py-8 px-4">
+        <footer className="footer-container mt-4 bg-black text-white py-8 px-4">
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
                 <div className="footer-brand mb-6 md:mb-0 text-center md:text-left pl-5">
                     <h2 className="text-3xl font-bold text-white font-[Gopher]">
