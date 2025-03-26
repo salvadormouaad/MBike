@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@font-face {
+    font-family: "Gopher";
+    src: url("./assets/GopherText.ttf");
+}
+
+@theme {
+    --color-blue: #2997ff;
+    --color-zinc: #101010;
+    --color-gray: #86868b;
+
+    --color-gray-100: #94928d;
+    --color-gray-200: #afafaf;
+    --color-gray-300: #42424570;
+}
+
+.nav-section {
+    border-color: #3b3b3b;
+    user-select: none;
+    font-family: "Gopher", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.screen-max-width {
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    position: relative;
+    max-width: 1120px;
+}
+
+.carousel-slide {
+    flex: 0 0 auto;
+}
