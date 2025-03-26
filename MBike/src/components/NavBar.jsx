@@ -7,9 +7,8 @@ import {
     menuIcon,
     rightArrow,
     closeIcon,
-} from '../../constants';
+} from "../constants";
 import { Link } from "react-router-dom";
-
 
 const NavBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -140,7 +139,7 @@ const NavBar = () => {
 
             {/* Search Bar Overlay */}
             {searchBar && (
-                <div className="fixed inset-0 z-[10] flex items-center justify-center bg-black/50 ">
+                <div className="fixed  inset-0 z-[10] flex items-center justify-center bg-black/50 ">
                     <div className="w-full max-w-4xl mx-4">
                         <div className="relative">
                             <input
@@ -163,16 +162,15 @@ const NavBar = () => {
                             </button>
                         </div>
                     </div>
-                    <div>
-                        <img
-                            src={closeIcon}
-                            alt="close"
-                            width={40}
-                            height={40}
-                            className="absolute top-6 right-0 cursor-pointer"
-                            onClick={() => setSearchBar(!searchBar)}
-                        />
-                    </div>
+
+                    <img
+                        src={closeIcon}
+                        alt="close"
+                        width={40}
+                        height={40}
+                        className=" h-full top-0 right-0 cursor-pointer"
+                        onClick={() => setSearchBar(!searchBar)}
+                    />
                 </div>
             )}
         </>

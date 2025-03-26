@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import { heroImg } from "../../constants/index";
-import {gsap}  from "gsap";
+import { heroImg } from "../constants";
+import { gsap } from "gsap";
 
 const HeroSection = () => {
     const titleRef = useRef(null);
@@ -95,11 +95,9 @@ const HeroSection = () => {
             <div className="relative z-10 text-center px-6 md:px-12 pb-10">
                 <h1
                     ref={titleRef}
-                    className="mb-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight font-gopher"
+                    className="mb-6 text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight font-gopher text-white sm:text-transparent sm:bg-clip-text sm:bg-gradient-to-r sm:from-gray-700 sm:via-white sm:to-gray-800 drop-shadow-lg"
                 >
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-300 via-white to-gray-400 drop-shadow-lg">
-                        Mountain Dominator
-                    </span>
+                    Mountain Dominator
                 </h1>
                 <p
                     ref={subtitleRef}

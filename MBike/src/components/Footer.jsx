@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     useGSAP(() => {
@@ -46,49 +46,37 @@ const Footer = () => {
     }, []);
 
     return (
-        <footer className="footer-container bg-black text-white py-8 px-4">
+        <footer className="footer-container mt-4 bg-black text-white py-8 px-4">
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
                 <div className="footer-brand mb-6 md:mb-0 text-center md:text-left pl-5">
                     <h2 className="text-3xl font-bold text-white font-[Gopher]">
-                        MBike
+                        <Link to={"/"}>MBike</Link>
                     </h2>
                     <p className="text-gray-400 mt-2 font-[Gopher] ">
                         Power and Precision
                     </p>
                 </div>
                 <ul className="flex space-x-6 text-lg text-gray-400">
-                    <li>
-                        <a
-                            href="#"
-                            className="nav-link hover:text-white hover:underline transition font-[Gopher]"
-                        >
+                    <Link to={"/"}>
+                        <li className="nav-link hover:text-white hover:underline transition font-[Gopher]">
                             Home
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#"
-                            className="nav-link hover:text-white hover:underline transition font-[Gopher]"
-                        >
+                        </li>
+                    </Link>
+                    <Link to={"/gears"}>
+                        <li className="nav-link hover:text-white hover:underline transition font-[Gopher]">
                             Gears
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#"
-                            className="nav-link hover:text-white hover:underline transition font-[Gopher]"
-                        >
+                        </li>
+                    </Link>
+                    <Link to={"/contact-us"}>
+                        <li className="nav-link hover:text-white hover:underline transition font-[Gopher]">
                             Contact Us
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#"
-                            className="nav-link hover:text-white hover:underline transition font-[Gopher]"
-                        >
+                        </li>
+                    </Link>
+                    <Link to={"/about"}>
+                        <li className="nav-link hover:text-white hover:underline transition font-[Gopher]">
                             About Us
-                        </a>
-                    </li>
+                        </li>
+                    </Link>
                 </ul>
 
                 <div className="flex space-x-4 mt-6 md:mt-0">

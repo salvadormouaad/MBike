@@ -1,25 +1,14 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-import { brands } from "../../constants/index";
+import { brands } from "../constants";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 const TrustedBrands = () => {
     const marqueeRef = useRef(null);
     const animationRef = useRef(null);
-    useGSAP(() => {
-        gsap.from("#brands-title", {
-            opacity: 0,
-            y: 30,
-            delay: 0.4,
-            scrollTrigger: {
-                trigger: "#brands-title",
-                start: "top 80%",
-                toggleActions: "play none none reset",
-            },
-        });
-    }, []);
+
     useGSAP(() => {
         const marquee = marqueeRef.current;
         const totalWidth = marquee.scrollWidth / 2;
@@ -51,7 +40,7 @@ const TrustedBrands = () => {
     }, []);
 
     return (
-        <section className="py-12 bg-white h-[400px]">
+        <section className="py-12 bg-white h-[400px] ">
             <div className="text-center mb-12">
                 <h2
                     className="text-3xl md:text-4xl font-bold text-gray-800"
