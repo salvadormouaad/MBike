@@ -1,99 +1,198 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import '../../index.css';
+import React, { useRef, useEffect, useMemo } from "react";
+import { useSelector } from "react-redux";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
-export default function Slide1() {
-  const bikes = useSelector((state) => state.bikes);
+gsap.registerPlugin(useGSAP);
 
-  const allBikes = Object.values(bikes).flatMap((category) =>
-    Object.values(category).flatMap((subCategory) =>
-      Object.values(subCategory).flat()
-    )
-  );
+export default function BikesSlider() {
+    const containerRef = useRef(null);
+    const trackRef = useRef(null);
+    const requestRef = useRef();
 
+    // Get all bike data from Redux
+    const bikeData = useSelector((state) => state.bikes);
 
-  const shuffleArray = (array) => {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-  };
+    // Extract and flatten all bike items from your Redux structure
+    const allBikes = useMemo(() => {
+        const categories = [
+            bikeData.MountainBike?.FullSuspension?.AMS || [],
+            bikeData.Road?.RoadRace?.Agree || [],
+            bikeData.Trekking?.City?.Hyde || [],
+        ];
 
-  const shuffledBikes = shuffleArray([...allBikes]);
+        return categories.flatMap((items) => items).filter(Boolean);
+    }, [bikeData]);
 
+    // Shuffle and duplicate for infinite effect
+    const carouselBikes = useMemo(() => {
+        const shuffleArray = (array) => {
+            const newArray = [...array];
+            for (let i = newArray.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+            }
+            return newArray;
+        };
 
-  const carouselBikes = [...shuffledBikes, ...shuffledBikes];
+        const shuffled = shuffleArray(allBikes);
+        return [...shuffled, ...shuffled];
+    }, [allBikes]);
 
-  return (
-    <div className="p-4 sm:p-6 md:p-8 bg-gray-100 ">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-10 md:mb-14  text-black tracking-tight">
-        <span className="block bg-clip-text text-transparent bg-gradient-to-r from-gray-800 to-gray-600">
-          Explore Our Bikes Collection
-        </span>
-      </h1>
+    // Animation variables
+    const animationProps = useRef({
+        speed: 0.6,
+        position: 0,
+        width: 0,
+        slideWidth: 0,
+        halfWidth: 0,
+    });
 
+    // Main animation loop using requestAnimationFrame
+    const animate = () => {
+        const props = animationProps.current;
+        props.position -= props.speed;
 
-      <div className="w-full overflow-hidden">
-        <div className="carousel-track flex animate-slide">
-          {/* Render the shuffled and duplicated bikes */}
-          {carouselBikes.map((bike, index) => (
-            <div
-              key={`${bike.Id}-${index}`}
-              className="carousel-slide flex-shrink-0 w-72 sm:w-80 md:w-96 bg-white rounded-3xl shadow-md overflow-hidden group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200 mx-4" // Added mx-4 for spacing between slides
-            >
-              <div className="relative h-56 sm:h-64 md:h-72 overflow-hidden">
-                <img
-                  src={bike.Images}
-                  alt={`Bike ${bike.Id}`}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 grayscale group-hover:grayscale-0"
-                  loading="lazy"
-                />
+        if (Math.abs(props.position) >= props.halfWidth) {
+            props.position = 0;
+        }
 
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-gray-900/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300"></div>
+        if (trackRef.current) {
+            trackRef.current.style.transform = `translateX(${props.position}px)`;
+        }
 
-                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
-                  <h2 className="text-xl sm:text-2xl font-bold text-white drop-shadow-md line-clamp-1">
-                    {bike.Name}
-                  </h2>
-                  <p className="text-sm sm:text-base text-gray-300 drop-shadow-md">
-                    Bike ID: {bike.Id}
-                  </p>
+        requestRef.current = requestAnimationFrame(animate);
+    };
+
+    useGSAP(() => {
+        if (!trackRef.current || !containerRef.current) return;
+
+        const slides = gsap.utils.toArray(".carousel-slide");
+        if (slides.length === 0) return;
+
+        const slideWidth = slides[0].offsetWidth;
+        const trackWidth = slideWidth * slides.length;
+        const halfWidth = trackWidth / 2;
+
+        animationProps.current = {
+            ...animationProps.current,
+            slideWidth,
+            width: trackWidth,
+            halfWidth,
+            position: 0,
+        };
+
+        gsap.set(trackRef.current, { width: trackWidth });
+        requestRef.current = requestAnimationFrame(animate);
+
+        const container = containerRef.current;
+        const handleMouseEnter = () => {
+            cancelAnimationFrame(requestRef.current);
+        };
+        const handleMouseLeave = () => {
+            requestRef.current = requestAnimationFrame(animate);
+        };
+
+        container.addEventListener("mouseenter", handleMouseEnter);
+        container.addEventListener("mouseleave", handleMouseLeave);
+
+        return () => {
+            cancelAnimationFrame(requestRef.current);
+            container.removeEventListener("mouseenter", handleMouseEnter);
+            container.removeEventListener("mouseleave", handleMouseLeave);
+        };
+    }, [carouselBikes]);
+
+    useEffect(() => {
+        return () => {
+            if (requestRef.current) {
+                cancelAnimationFrame(requestRef.current);
+            }
+        };
+    }, []);
+
+    return (
+        <section className="py-12 md:py-20 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="text-center mb-16">
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
+                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-800 to-gray-600">
+                            Discover Our Premium Bikes
+                        </span>
+                    </h2>
+                    <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+                        Explore our range of high-performance bicycles
+                    </p>
                 </div>
-              </div>
 
-              <div className="p-4 sm:p-6 bg-gray-50">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-sm text-gray-600 font-medium">
-                    {bike.Taille ? 'Mountain Bike' : bike.Frein ? 'Road Bike' : 'Trekking Bike'}
-                  </span>
-                  <span className="text-sm text-gray-800 font-semibold">
-                    In Stock
-                  </span>
+                <div ref={containerRef} className="relative overflow-hidden">
+                    <div
+                        ref={trackRef}
+                        className="flex py-8 will-change-transform"
+                    >
+                        {carouselBikes.map((bike, index) => (
+                            <div
+                                key={`${bike.Id}-${index}`}
+                                className="carousel-slide flex-shrink-0 w-64 sm:w-72 md:w-80 bg-white rounded-2xl shadow-md overflow-hidden group mx-3 transition-transform duration-300 ease-out hover:scale-[1.02] hover:shadow-lg cursor-pointer"
+                            >
+                                <div className="relative h-56 sm:h-64 md:h-72 overflow-hidden">
+                                    <img
+                                        src={bike.Images}
+                                        alt={bike.Name}
+                                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                        loading="lazy"
+                                        decoding="async"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/30 to-transparent" />
+
+                                    <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
+                                        <h3 className="text-lg sm:text-xl font-bold text-white mb-1 line-clamp-1">
+                                            {bike.Name}
+                                        </h3>
+                                        <p className="text-xs sm:text-sm text-gray-300">
+                                            {bike.Poids} | {bike.Price}
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div className="p-4 sm:p-6 bg-white border-t border-gray-100">
+                                    <div className="flex justify-between items-center mb-3">
+                                        <span className="text-xs sm:text-sm font-medium text-gray-600">
+                                            Sizes: {bike.Taille?.[0]} -{" "}
+                                            {
+                                                bike.Taille?.[
+                                                    bike.Taille.length - 1
+                                                ]
+                                            }
+                                        </span>
+                                        <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                                            In Stock
+                                        </span>
+                                    </div>
+
+                                    <button className="w-full flex items-center justify-center px-4 py-2 sm:px-5 sm:py-2.5 bg-gray-800 text-white font-medium rounded-lg hover:bg-gray-900 transition-colors duration-300 cursor-pointer">
+                                        <span className="mr-2 text-sm">
+                                            View Details
+                                        </span>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="h-4 w-4"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                        >
+                                            <path
+                                                fillRule="evenodd"
+                                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                                clipRule="evenodd"
+                                            />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
-
-                <button className="w-full bg-gradient-to-r from-gray-700 to-gray-900 text-white py-2.5 sm:py-3 px-6 rounded-xl hover:from-gray-800 hover:to-black transition-all duration-300 flex items-center justify-center shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
-                  <span className="text-sm sm:text-base font-medium mr-2">
-                    View Details
-                  </span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4 sm:h-5 sm:w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </button>
-              </div>
             </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
+        </section>
+    );
 }
