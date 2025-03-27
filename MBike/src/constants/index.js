@@ -1,9 +1,10 @@
 export const navLists = [
     { name: "Home", path: "/" },
-    { name: "Bikes", path: "/bikes" },
-    { name: "Gear", path: "/gears" },
+    // { name: "Bikes", path: "/bikes" },
+    // { name: "Gear", path: "/gears" },
     { name: "Catalog", path: "/catalog" },
     { name: "About", path: "/about" },
+    { name: "Contact" , path : "/Contact"}
 ];
 
 import react from "../assets/images/react.svg";

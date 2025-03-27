@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 function Section_Chaussures() {
     const reduxChaussures = useSelector(
@@ -34,7 +35,7 @@ function Section_Chaussures() {
                                         {val.description}
                                     </p>
                                     <div className="flex justify-center lg:justify-start animate-fade-in-up animation-delay-400">
-                                        <a
+                                        <Link to='/Catalogue'
                                             href="#"
                                             className="inline-flex items-center px-5 py-3 text-base font-medium text-white bg-primary-700 rounded-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 transition-all duration-300 ease-in-out group"
                                         >
@@ -51,7 +52,7 @@ function Section_Chaussures() {
                                                     clipRule="evenodd"
                                                 />
                                             </svg>
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
 
