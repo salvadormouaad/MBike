@@ -1,0 +1,69 @@
+
+{
+    "users": [
+    {
+      "name": "Bob Brown",
+      "email": "bob.brown@example527.com",
+      "password": "test1234",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "name": "Charlie Davis",
+      "email": "charlie.davis@example.com",
+      "password": "letmein567",
+      "admin": false
+    },
+    {
+      "name": "salvador",
+      "email": "salvadordomingew32@gmail.com",
+      "password": "salvador",
+      "id": 7,
+      "admin": false
+    },
+    {
+      "name": "John Doe",
+      "email": "utaroshop32@gmail.com",
+      "password": "lol56",
+      "id": 8,
+      "admin": false
+    },
+    {
+      "name": "no way give this",
+      "email": "jane.smith6tg5t@example.com",
+      "password": "qwerty456",
+      "id": 14,
+      "admin": false
+    }
+  ],
+  "admins": [
+    {
+      "name": "salvador domingez",
+      "email": "salvadordomingez@example.com",
+      "password": "qwerty456",
+      "id": 1
+    }
+  ],
+  "bikes" : [
+    {
+      "id": 1,
+      "name": "Mountain Pro X1",
+      "brand": "Trek",
+      "price": 1299.99,
+      "color": "Matte Black",
+      "type": "Mountain Bike"
+    }
+  ],
+  "gears" : [
+    {
+      "id": 1,
+      "name": "Pro Helmet X3",
+      "brand": "Giro",
+      "price": 149.99,
+      "category": "Safety",
+      "color": "Matte Black/Red"
+    }
+  ]
+
+
+}

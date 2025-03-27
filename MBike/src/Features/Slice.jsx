@@ -17,7 +17,8 @@ const Slice = createSlice({
     initialState,
     reducers :{
 
-    }
+    },
+    
 
 })
 export default Slice.reducer
