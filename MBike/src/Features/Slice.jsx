@@ -24,6 +24,32 @@ const fetchBike = createAsyncThunk('/users/fetchUsers',async()=>{
 })
 
 
+
+const readGears = createAsyncThunk('/users/readGears',async()=>{
+    const response = await axios.get('http://localhost:3000/gears')
+    .then(res => res.data)
+    return response
+})
+
+
+const addGears = createAsyncThunk('/users/addGears',async(data)=>{
+    const response = await axios.post('http://localhost:3000/gears',data)
+    return response.data
+})
+
+
+const updateGears = createAsyncThunk('/users/updateGears',async({id, postdata})=>{
+    const response = await axios.put('http://localhost:3000/gears/'+ id ,postdata)
+    return response.data
+})
+
+
+const deleteGears = createAsyncThunk("/users/deleteGears", async (id) => {
+    const response = await axios.delete(`http://localhost:3000/gears/${id}`);
+    return id;
+  });
+  
+
 const Slice = createSlice({
     name : 'users',
     initialState,
