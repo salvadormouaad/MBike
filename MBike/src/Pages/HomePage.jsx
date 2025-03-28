@@ -8,7 +8,6 @@ import Section_Chaussures from "../components/Section_Catalogue/Section_Chaussur
 import Section_Gants from "../components/Section_Catalogue/Section_Gants";
 import Section_Qasques from "../components/Section_Catalogue/Section_Qasques";
 import Section_Vetements from "../components/Section_Catalogue/Section_Vetements";
-import Admin from "./Admin";
 export const HomePage = () => {
     return (
         <div className="w-full min-h-screen overflow-x-hidden">
@@ -21,7 +20,6 @@ export const HomePage = () => {
             <Section_Gants />
             <Section_Qasques />
             <Section_Vetements />
-            <Admin/>
             <TrustedBrands />
         </div>
     );
