@@ -4,7 +4,7 @@ import { Link,  useNavigate } from 'react-router-dom'
 import { fetchUsers } from "./Slice";
 import { useDispatch, useSelector } from 'react-redux';
 import { readAdmin } from './Slice';
-const Form = () => {
+const FormLogin = () => {
 
 
 const navigate = useNavigate()
@@ -101,4 +101,4 @@ const navigate = useNavigate()
   );
 }
 
-export default Form;
+export default FormLogin;
