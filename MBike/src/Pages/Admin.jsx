@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchBike } from "../Features/Slice";
+import { fetchBike , readGears , fetchUsers ,fetchAdmins} from "../Features/Slice";
 import { Link } from "react-router-dom"; // Corrected import for Link
 import axios from "axios";
 
@@ -9,11 +9,16 @@ export default function Admin() {
   const { loading, users, error } = useSelector((state) => state.users);
   const admins = useSelector((state) => state.users.admins);
   const Bikes = useSelector((state) => state.users.bikes);
+  const Gears = useSelector((state) => state.users.gears);
+
 
   console.log("Admins from Redux:", admins);
 
   useEffect(() => {
     dispatch(fetchBike());
+    dispatch(readGears());
+    dispatch(fetchUsers());
+    dispatch(fetchAdmins());
     // dispatch(readAdmin());
   }, [dispatch]);
 
@@ -112,6 +117,187 @@ export default function Admin() {
                 textShadow: "1px 1px 2px rgba(0, 0, 0, 0.1)",
               }}
             >
+                /* Users */
+                <h3
+              className="mb-3"
+              style={{
+                color: "#333",
+                fontSize: "1.5rem",
+                fontWeight: "600",
+                borderBottom: "2px solid #764ba2",
+                paddingBottom: "5px",
+                textShadow: "1px 1px 2px rgba(0, 0, 0, 0.1)",
+              }}
+            >
+              users
+            </h3>
+            <table
+              className="table table-striped table-hover"
+              style={{ borderRadius: "10px", overflow: "hidden" }}
+            >
+              <thead
+                className="table-dark"
+                style={{ backgroundColor: "#343a40", color: "#fff" }}
+              >
+                <tr>
+                  <th scope="col" style={{ padding: "12px" }}>
+                    Id
+                  </th>
+                  <th scope="col" style={{ padding: "12px" }}>
+                    Name
+                  </th>
+                  <th scope="col" style={{ padding: "12px" }}>
+                    Email
+                  </th>
+                  <th scope="col" style={{ padding: "12px" }}>
+                    Password
+                  </th>
+                  <th scope="col" style={{ padding: "12px" }}>
+                    Actions
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {Array.isArray(users) && users.length > 0 ? (
+                  users.map((user, index) => (
+                    <tr
+                      key={index}
+                      style={{
+                        transition: "background 0.2s",
+                        cursor: "pointer",
+                      }}
+                      onMouseEnter={(e) =>
+                        (e.currentTarget.style.backgroundColor = "#f8f9fa")
+                      }
+                      onMouseLeave={(e) =>
+                        (e.currentTarget.style.backgroundColor = "transparent")
+                      }
+                    >
+                      <td style={{ padding: "12px", verticalAlign: "middle" }}>
+                        {user.id}
+                      </td>
+                      <td style={{ padding: "12px", verticalAlign: "middle" }}>
+                        {user.name}
+                      </td>
+                      <td style={{ padding: "12px", verticalAlign: "middle" }}>
+                        {user.email}
+                      </td>
+                      <td style={{ padding: "12px", verticalAlign: "middle" }}>
+                        {user.password}
+                      </td>
+                      <td style={{ padding: "12px", verticalAlign: "middle" }}>
+
+                      </td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td
+                      colSpan="5"
+                      className="text-center"
+                      style={{
+                        padding: "20px",
+                        color: "#666",
+                        fontStyle: "italic",
+                      }}
+                    >
+                      No Users found.
+                    </td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+            /* Admins */
+            <h3
+              className="mb-3"
+              style={{
+                color: "#333",
+                fontSize: "1.5rem",
+                fontWeight: "600",
+                borderBottom: "2px solid #764ba2",
+                paddingBottom: "5px",
+                textShadow: "1px 1px 2px rgba(0, 0, 0, 0.1)",
+              }}
+            >
+              users
+            </h3>
+            <table
+              className="table table-striped table-hover"
+              style={{ borderRadius: "10px", overflow: "hidden" }}
+            >
+              <thead
+                className="table-dark"
+                style={{ backgroundColor: "#343a40", color: "#fff" }}
+              >
+                <tr>
+                  <th scope="col" style={{ padding: "12px" }}>
+                    Id
+                  </th>
+                  <th scope="col" style={{ padding: "12px" }}>
+                    Name
+                  </th>
+                  <th scope="col" style={{ padding: "12px" }}>
+                    Email
+                  </th>
+                  <th scope="col" style={{ padding: "12px" }}>
+                    Password
+                  </th>
+                  <th scope="col" style={{ padding: "12px" }}>
+                    Actions
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {Array.isArray(admins) && admins.length > 0 ? (
+                  admins.map((admin, index) => (
+                    <tr
+                      key={index}
+                      style={{
+                        transition: "background 0.2s",
+                        cursor: "pointer",
+                      }}
+                      onMouseEnter={(e) =>
+                        (e.currentTarget.style.backgroundColor = "#f8f9fa")
+                      }
+                      onMouseLeave={(e) =>
+                        (e.currentTarget.style.backgroundColor = "transparent")
+                      }
+                    >
+                      <td style={{ padding: "12px", verticalAlign: "middle" }}>
+                        {admin.id}
+                      </td>
+                      <td style={{ padding: "12px", verticalAlign: "middle" }}>
+                        {admin.name}
+                      </td>
+                      <td style={{ padding: "12px", verticalAlign: "middle" }}>
+                        {admin.email}
+                      </td>
+                      <td style={{ padding: "12px", verticalAlign: "middle" }}>
+                        {admin.password}
+                      </td>
+                      <td style={{ padding: "12px", verticalAlign: "middle" }}>
+
+                      </td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td
+                      colSpan="5"
+                      className="text-center"
+                      style={{
+                        padding: "20px",
+                        color: "#666",
+                        fontStyle: "italic",
+                      }}
+                    >
+                      No Users found.
+                    </td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+                        /* Bikes */
               Bikes
             </h3>
             <table
@@ -169,57 +355,7 @@ export default function Admin() {
                         {bike.price}
                       </td>
                       <td style={{ padding: "12px", verticalAlign: "middle" }}>
-                        {/* <Link
-                          to={`/EditAd/${user.id}`}
-                          className="btn btn-primary btn-sm mx-1 px-3"
-                          style={{
-                            transition: "all 0.3s",
-                            borderRadius: "5px",
-                            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-                          }}
-                          onMouseEnter={(e) =>
-                            (e.target.style.backgroundColor = "#0056b3")
-                          }
-                          onMouseLeave={(e) =>
-                            (e.target.style.backgroundColor = "#007bff")
-                          }
-                        >
-                          Edit
-                        </Link> */}
-                        {/* <button
-                          className="btn btn-danger btn-sm mx-1 px-3"
-                          style={{
-                            transition: "all 0.3s",
-                            borderRadius: "5px",
-                            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-                          }}
-                          onClick={() => HandleDelete(user.id)}
-                          onMouseEnter={(e) =>
-                            (e.target.style.backgroundColor = "#c82333")
-                          }
-                          onMouseLeave={(e) =>
-                            (e.target.style.backgroundColor = "#dc3545")
-                          }
-                        >
-                          Delete
-                        </button> */}
-                        {/* <button
-                          className="btn btn-success btn-sm mx-1 px-3"
-                          style={{
-                            transition: "all 0.3s",
-                            borderRadius: "5px",
-                            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-                          }}
-                          onClick={() => Handleadmin(user.id)}
-                          onMouseEnter={(e) =>
-                            (e.target.style.backgroundColor = "#218838")
-                          }
-                          onMouseLeave={(e) =>
-                            (e.target.style.backgroundColor = "#28a745")
-                          }
-                        >
-                          Add Admin
-                        </button> */}
+
                       </td>
                     </tr>
                   ))
@@ -240,9 +376,9 @@ export default function Admin() {
                 )}
               </tbody>
             </table>
-
-            {/* <h3
-              className="mb-3 mt-5"
+                    /* Gears */
+                    <h3
+              className="mb-3"
               style={{
                 color: "#333",
                 fontSize: "1.5rem",
@@ -252,7 +388,7 @@ export default function Admin() {
                 textShadow: "1px 1px 2px rgba(0, 0, 0, 0.1)",
               }}
             >
-              Admins
+              Gears
             </h3>
             <table
               className="table table-striped table-hover"
@@ -264,16 +400,16 @@ export default function Admin() {
               >
                 <tr>
                   <th scope="col" style={{ padding: "12px" }}>
-                    ID
+                    Id
                   </th>
                   <th scope="col" style={{ padding: "12px" }}>
                     Name
                   </th>
                   <th scope="col" style={{ padding: "12px" }}>
-                    Password
+                    Email
                   </th>
                   <th scope="col" style={{ padding: "12px" }}>
-                    Email
+                    Password
                   </th>
                   <th scope="col" style={{ padding: "12px" }}>
                     Actions
@@ -281,10 +417,10 @@ export default function Admin() {
                 </tr>
               </thead>
               <tbody>
-                {Array.isArray(admins) && admins.length > 0 ? (
-                  admins.map((admin) => (
+                {Array.isArray(Gears) && Gears.length > 0 ? (
+                  Gears.map((gear, index) => (
                     <tr
-                      key={admin.id}
+                      key={index}
                       style={{
                         transition: "background 0.2s",
                         cursor: "pointer",
@@ -297,42 +433,26 @@ export default function Admin() {
                       }
                     >
                       <td style={{ padding: "12px", verticalAlign: "middle" }}>
-                        {admin.id}
+                        {gear.id}
                       </td>
                       <td style={{ padding: "12px", verticalAlign: "middle" }}>
-                        {admin.name}
+                        {gear.name}
                       </td>
                       <td style={{ padding: "12px", verticalAlign: "middle" }}>
-                        {admin.password}
+                        {gear.brand}
                       </td>
                       <td style={{ padding: "12px", verticalAlign: "middle" }}>
-                        {admin.email}
+                        {gear.price}
                       </td>
                       <td style={{ padding: "12px", verticalAlign: "middle" }}>
-                        <button
-                          className="btn btn-danger btn-sm mx-1 px-3"
-                          style={{
-                            transition: "all 0.3s",
-                            borderRadius: "5px",
-                            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-                          }}
-                          onClick={() => HandleDelete2(admin.id)}
-                          onMouseEnter={(e) =>
-                            (e.target.style.backgroundColor = "#c82333")
-                          }
-                          onMouseLeave={(e) =>
-                            (e.target.style.backgroundColor = "#dc3545")
-                          }
-                        >
-                          Remove
-                        </button>
+
                       </td>
                     </tr>
                   ))
                 ) : (
                   <tr>
                     <td
-                      colSpan="4"
+                      colSpan="5"
                       className="text-center"
                       style={{
                         padding: "20px",
@@ -340,12 +460,16 @@ export default function Admin() {
                         fontStyle: "italic",
                       }}
                     >
-                      No admins found.
+                      No Gears found.
                     </td>
                   </tr>
                 )}
               </tbody>
-            </table> */}
+            </table>
+
+
+
+
           </div>
         )}
       </div>
