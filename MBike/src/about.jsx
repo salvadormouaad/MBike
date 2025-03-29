@@ -17,6 +17,11 @@ const BikeAboutTown = () => {
           Bienvenue chez Mbike, votre destination incontournable pour tout ce qui concerne le monde du vélo ! Que vous soyez passionné de VTT, amateur de route, adepte du gravel, cycliste urbain ou fan d’e-bikes, nous avons tout ce qu’il vous faut.
           <br />
           Notre mission est simple : offrir aux cyclistes de tous niveaux les meilleurs vélos, accessoires et équipements pour une expérience optimale. Nous sélectionnons avec soin des produits de haute qualité auprès des plus grandes marques, garantissant performance, confort et sécurité.
+          <br />
+          Notre équipe de passionnés est toujours à votre disposition pour vous conseiller et vous aider à trouver l’équipement idéal, que vous cherchiez un vélo performant, un casque ultra-sécurisé ou les dernières innovations en matière d’accessoires.
+          <br />
+          En plus de notre large gamme de produits, nous proposons également des services dédiés aux cyclistes : entretien et réparation, conseils personnalisés, essais de vélos, et bien plus encore. Nous croyons que chaque cycliste mérite le meilleur, et c’est pourquoi nous nous engageons à vous accompagner à chaque coup de pédale.
+          
         </p>
         <div className="grid grid-cols-2 gap-6">
           <div className="bg-white p-6 rounded-lg shadow-md">
