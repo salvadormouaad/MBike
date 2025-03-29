@@ -18,14 +18,13 @@ export const Router = createBrowserRouter([
                 path: "/Contact",
                 element: <p> upcoming Contact Page </p>,
             },
-
             {
                 path: "/store",
                 element: <Store />,
             },
             {
-            path: "/OurBestProducts",
-            element: <OurBestProducts />,
+                path: "/best-products",
+                element: <OurBestProducts />,
             },
             {
                 path: "/about",

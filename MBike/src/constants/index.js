@@ -1,7 +1,7 @@
 export const navLists = [
     { name: "Home", path: "/" },
-    // { name: "Bikes", path: "/bikes" },
-    // { name: "Gear", path: "/gears" },
+    { name: "Best Products", path: "/OurBestProducts" },
+    { name: "Store", path: "/Store" },
     { name: "Catalog", path: "/catalog" },
     { name: "About", path: "/about" },
     { name: "Contact" , path : "/Contact"}
