@@ -6,7 +6,7 @@ export default function Store() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* <BestSales /> */}
-    <OurBestProducts/>
+      <OurBestProducts/>
     </div>
   );
 }
