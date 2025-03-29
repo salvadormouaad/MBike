@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../Layouts/Layout";
 import HomePage from "../Pages/HomePage";
-import BikeAboutTown from "../Pages/About/about";
 import Contact from "../Pages/contact";
 import Store from "../Pages/Store";
 import OurBestProducts from "../Pages/ourbestproducts";
+import BikeAboutTown from "./Pages/About/about";
 
 export const Router = createBrowserRouter([
     {
@@ -27,7 +27,7 @@ export const Router = createBrowserRouter([
                 element: <OurBestProducts />,
             },
             {
-                path: "/about",
+                path: "/BikeAboutTown",
                 element: <BikeAboutTown />,
             },
             {
