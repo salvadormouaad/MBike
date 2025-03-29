@@ -10,7 +10,7 @@ const Contact = () => {
     const button = buttonRef.current;
     const onHover = () => {
       gsap.to(button, {
-        scale: 1.1, 
+        scale: 1.1,
         backgroundColor: 'rgba(255, 255, 255, 0.3)',
         duration: 0.3,
         ease: 'power2.out',
@@ -44,7 +44,7 @@ const Contact = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">
             Get in Touch
           </h2>
-          <p className="text-lg md:text-xl text-gray-300 mt-4 font-medium drop-shadow-md">
+          <p className="text-lg md:text-xl text-gray-100 mt-4 font-medium drop-shadow-md">
             Contact Mbike Complete for all your cycling needs
           </p>
         </div>
@@ -53,7 +53,7 @@ const Contact = () => {
             <h3 className="text-2xl font-semibold text-white mb-6">Send Us a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-black">
+                <label htmlFor="name" className="block text-xl font-medium text-white ">
                   Name
                 </label>
                 <input
@@ -65,7 +65,7 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-black">
+                <label htmlFor="email" className="block text-xl font-medium text-white">
                   Email
                 </label>
                 <input
@@ -77,7 +77,7 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-black">
+                <label htmlFor="message" className="block text-xl font-medium text-white">
                   Message
                 </label>
                 <textarea
@@ -90,7 +90,7 @@ const Contact = () => {
               </div>
               <button
                 type="submit"
-                ref={buttonRef} 
+                ref={buttonRef}
                 className="relative inline-flex items-center bg-white/10 border border-white/30 rounded-full px-6 py-2 text-white font-medium transition-all duration-300"
               >
                 Send Message

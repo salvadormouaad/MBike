@@ -15,11 +15,6 @@ export const Router = createBrowserRouter([
                 element: <HomePage />,
             },
             {
-                path: "/Contact",
-                element: <p> upcoming Contact Page </p>,
-            },
-
-            {
                 path: "/store",
                 element: <Store />,
             },
@@ -40,7 +35,7 @@ export const Router = createBrowserRouter([
                 element: <p> upcoming Cart Page </p>,
             },
             {
-                path: "/contact-us",
+                path: "/Contact",
                 element: <Contact />,
             },
             {
