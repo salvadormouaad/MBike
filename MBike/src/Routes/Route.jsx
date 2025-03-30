@@ -25,7 +25,7 @@ export const Router = createBrowserRouter([
             element: <OurBestProducts />,
             },
             {
-                path: "/about",
+                path: "/BikeAboutTown",
                 element: <BikeAboutTown />,
             },
             {
