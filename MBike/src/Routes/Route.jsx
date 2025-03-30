@@ -5,6 +5,8 @@ import BikeAboutTown from "../Pages/About/about";
 import Contact from "../Pages/contact";
 import Store from "../Pages/Store";
 import OurBestProducts from "../Pages/ourbestproducts";
+import FormLogin from "../Pages/Login";
+import FormRegister from "../Pages/Register";
 
 export const Router = createBrowserRouter([
     {
@@ -27,8 +29,12 @@ export const Router = createBrowserRouter([
                 element: <BikeAboutTown />,
             },
             {
-                path: "/profile",
-                element: <p> upcoming Profile Page </p>,
+                path: "/FormLogin",
+                element: <FormLogin />,
+            },
+            {
+                path: "/FormRegister",
+                element: <FormRegister />,
             },
             {
                 path: "/cart",

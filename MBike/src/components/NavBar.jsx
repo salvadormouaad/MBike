@@ -58,7 +58,7 @@ const NavBar = () => {
                                     Search
                                 </span>
                             </div>
-                            <Link to={"/profile"}>
+                            <Link to={"/FormLogin"}>
                                 <img
                                     src={profileImg}
                                     alt="profile"
