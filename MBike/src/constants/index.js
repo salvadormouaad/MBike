@@ -2,7 +2,7 @@ export const navLists = [
     { name: "Home", path: "/" },
     { name: "Bikes", path: "/bikes" },
     { name: "Gear", path: "/gears" },
-    { name: "Catalog", path: "/catalog" },
+    { name: "Shop", path: "/Store" },
     { name: "About", path: "/about" },
 ];
 

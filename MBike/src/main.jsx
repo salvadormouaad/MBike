@@ -3,12 +3,14 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import { Provider } from "react-redux";
-import { StoreGlobal } from "./store/storeGlobal.jsx";
+import { store } from './store/store.jsx';
+import Testapi from "./API/testapi.jsx";
 
 createRoot(document.getElementById("root")).render(
     <StrictMode>
-        <Provider store={StoreGlobal}>
+        <Provider store={store}>
             <App />
+            <Testapi/>
         </Provider>
     </StrictMode>
 );
