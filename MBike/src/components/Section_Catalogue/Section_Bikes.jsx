@@ -30,7 +30,7 @@ function Section_Bikes() {
                                 aluminum is the 13th element.
                             </p>
                             <div className="flex justify-center lg:justify-start animate-fade-in-up animation-delay-400">
-                                <Link to='/Catalogue'
+                                <Link to='/OurBestProducts'
                                     href="#"
                                     className="inline-flex items-center px-5 py-3 text-base font-medium text-white bg-primary-700 rounded-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 transition-all duration-300 ease-in-out group"
                                 >
