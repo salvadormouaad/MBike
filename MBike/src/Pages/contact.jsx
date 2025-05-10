@@ -45,7 +45,7 @@ const Contact = () => {
                         Get in Touch
                     </h2>
                     <p className="text-lg md:text-xl text-gray-100 mt-4 font-medium drop-shadow-md">
-                        Contact Mbike Complete for all your cycling needs
+                        Contact Zelige
                     </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white/10 backdrop-blur-lg rounded-lg p-6 md:p-10 shadow-xl border border-white/20">
@@ -116,7 +116,7 @@ const Contact = () => {
                         <div className="text-gray-200 space-y-4">
                             <p>
                                 <strong className="text-white">
-                                    Mbike Complete
+                                    Zelige
                                 </strong>
                                 <br />
                                 123 Rue
@@ -128,7 +128,7 @@ const Contact = () => {
                             <p>
                                 <strong>Phone:</strong> +212 612345678
                                 <br />
-                                <strong>Email:</strong> Mbike-Maroc@gmail.com
+                                <strong>Email:</strong> Zelige-Maroc@gmail.com
                             </p>
                             <div className="mt-6">
                                 <iframe

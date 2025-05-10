@@ -1,11 +1,10 @@
 import React, { useEffect } from "react";
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import { useSelector, useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import { fetchProducts } from "../features/productsSlice";
 import { addToCart, removeFromCart, updateQuantity } from "../features/cartSlice";
 import { addToFavorites, removeFromFavorites } from "../features/favoritesSlice";
-import { backendBaseUrl } from "../API/axios.js";
+import { backendBaseUrl } from "../api/axios.js";
 
 const ShoppingCart = () => {
     const dispatch = useDispatch();
@@ -45,11 +44,12 @@ const ShoppingCart = () => {
     // For simplicity, set savings, pickup, and tax to 0 (you can add logic to calculate these)
     const savings = 0;
     const pickup = 0;
-    const tax = 0;
+    const tax = subtotal * 0.1; // 10% tax
     const total = subtotal - savings + pickup + tax;
 
     // Handle quantity changes
     const handleQuantityChange = (id, newQuantity) => {
+        if (newQuantity < 1) return; // Prevent negative quantities
         dispatch(updateQuantity({ id, quantity: newQuantity }));
     };
 
@@ -66,6 +66,7 @@ const ShoppingCart = () => {
                 name: product.name,
                 price: product.salePrice,
                 image: product.image,
+                quantity: 1
             })
         );
     };
@@ -85,6 +86,35 @@ const ShoppingCart = () => {
                 })
             );
         }
+    };
+
+    // Handle checkout
+    const handleCheckout = () => {
+        if (cartItems.length === 0) {
+            alert("Your cart is empty. Please add items before checkout.");
+            return;
+        }
+        // Here you would typically integrate with a payment processor
+        // For now, we'll just show an alert
+        alert("Proceeding to checkout... This feature will be implemented soon!");
+        // navigate('/checkout');
+    };
+
+    // Handle continue shopping
+    const handleContinueShopping = () => {
+        navigate('/Store');
+    };
+
+    // Handle voucher application
+    const handleVoucherSubmit = (e) => {
+        e.preventDefault();
+        const voucherCode = e.target.voucher.value;
+        if (!voucherCode) {
+            alert("Please enter a voucher code");
+            return;
+        }
+        // Here you would typically validate the voucher with your backend
+        alert("Voucher functionality will be implemented soon!");
     };
 
     return (
@@ -144,7 +174,8 @@ const ShoppingCart = () => {
                                                             </svg>
                                                         </button>
                                                         <input
-                                                            type="text"
+                                                            type="number"
+                                                            min="1"
                                                             className="w-10 shrink-0 border-0 bg-transparent text-center text-sm font-medium text-gray-900 focus:outline-none focus:ring-0"
                                                             value={item.quantity}
                                                             onChange={(e) =>
@@ -389,7 +420,7 @@ const ShoppingCart = () => {
 
                                     <dl className="flex items-center justify-between gap-4">
                                         <dt className="text-base font-normal text-gray-500">
-                                            Tax
+                                            Tax (10%)
                                         </dt>
                                         <dd className="text-base font-medium text-gray-900">
                                             ${tax.toLocaleString()}
@@ -408,7 +439,7 @@ const ShoppingCart = () => {
                             </div>
 
                             <button
-                                onClick={() => navigate('/checkout')}
+                                onClick={handleCheckout}
                                 className="flex w-full items-center justify-center rounded-lg bg-black px-5 py-2.5 text-sm font-medium text-white hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-300"
                             >
                                 Proceed to Checkout
@@ -417,7 +448,7 @@ const ShoppingCart = () => {
                             <div className="flex items-center justify-center gap-2">
                                 <span className="text-sm font-normal text-gray-500"> or </span>
                                 <button
-                                    onClick={() => navigate('/products')}
+                                    onClick={handleContinueShopping}
                                     className="inline-flex items-center gap-2 text-sm font-medium text-black underline hover:no-underline"
                                 >
                                     Continue Shopping
@@ -441,7 +472,7 @@ const ShoppingCart = () => {
                         </div>
 
                         <div className="space-y-4 rounded-lg border border-gray-200 bg-white p-4 shadow-sm sm:p-6">
-                            <form className="space-y-4">
+                            <form onSubmit={handleVoucherSubmit} className="space-y-4">
                                 <div>
                                     <label
                                         htmlFor="voucher"
@@ -452,18 +483,15 @@ const ShoppingCart = () => {
                                     <input
                                         type="text"
                                         id="voucher"
+                                        name="voucher"
                                         className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-black focus:ring-black"
-                                        placeholder=""
+                                        placeholder="Enter voucher code"
                                         required
                                     />
                                 </div>
                                 <button
                                     type="submit"
                                     className="flex w-full items-center justify-center rounded-lg bg-black px-5 py-2.5 text-sm font-medium text-white hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-300"
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        alert("Voucher functionality coming soon!");
-                                    }}
                                 >
                                     Apply Code
                                 </button>

@@ -14,6 +14,7 @@ import Register from "../components/Register.jsx";
 import Favorites from "../Pages/Favorites.jsx";
 import ProductsGrid from "../Pages/CatalogGrid.jsx";
 import Details from "../Pages/ProductDetails.jsx";
+import ProductDetails from "../components/ProductDetails.jsx";
 
 export const Router = createBrowserRouter([
     {
@@ -35,10 +36,10 @@ export const Router = createBrowserRouter([
                 path: "/Store",
                 element: <ProductsGrid />,
             },
-           /* {
+            {
                 path: "/product/:id",
                 element: <ProductDetails />,
-            },*/
+            },
             {
                 path: "/about",
                 element: <BikeAboutTown />,

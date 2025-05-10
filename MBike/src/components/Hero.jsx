@@ -97,14 +97,14 @@ const HeroSection = () => {
                     ref={titleRef}
                     className="mb-6 text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight font-gopher text-white sm:text-transparent sm:bg-clip-text sm:bg-gradient-to-r sm:from-gray-700 sm:via-white sm:to-gray-800 drop-shadow-lg"
                 >
-                    Mountain Dominator
+                    Zlige Marocain
                 </h1>
                 <p
                     ref={subtitleRef}
                     className="text-lg sm:text-xl md:text-2xl font-medium text-gray-200 max-w-2xl mx-auto drop-shadow-md font-gopher"
                 >
-                    Built to Conquer Every Trail with Unmatched Power and
-                    Precision
+                    Built to Conrich Every Space with Unmatched Beauty and Craftsmanship
+                    ✨ Zelige Marocain – Where Tradition Meets Precision. 
                 </p>
 
                 <a

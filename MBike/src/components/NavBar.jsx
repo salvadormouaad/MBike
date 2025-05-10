@@ -1,4 +1,4 @@
-import {useState, useEffect, useRef} from "react";
+import { useState, useEffect, useRef } from "react";
 import {
     navLists,
     bagImg,
@@ -14,8 +14,8 @@ import { logoutUser } from "../features/authSlice";
 import {
     selectIsAuthenticated,
     selectUser,
-    selectCartItemCount, selectFavoritesCount,
-
+    selectCartItemCount,
+    selectFavoritesCount,
 } from "../selectors/authSelectors";
 
 const NavBar = () => {
@@ -92,11 +92,11 @@ const NavBar = () => {
         <>
             <div className="w-full sticky top-0 z-[100] shadow-2xl">
                 <header
-                    className={`w-full py-4 sm:px-10 px-5 flex justify-between items-center relative text-white bg-black nav-section transition-all duration-300`}
+                    className={`w-full py-4 sm:px-10 px-5 flex justify-between items-center relative text-white bg-[#00296b] nav-section transition-all duration-300`}
                 >
                     <nav className="w-full flex screen-max-width">
                         <div className="pt-1 text-4xl cursor-pointer max-sm:mt-3 font-bold tracking-tight">
-                            <Link to={"/"} className="hover:text-gray-300 transition-colors duration-200">
+                            <Link to={"/"} className="text-white hover:underline transition-colors duration-200">
                                 MBike
                             </Link>
                         </div>
@@ -107,7 +107,7 @@ const NavBar = () => {
                                 <li key={i}>
                                     <Link
                                         to={item.path}
-                                        className="px-5 text-lg cursor-pointer text-gray hover:text-white py-2 rounded-md transition-all duration-200"
+                                        className="px-5 text-lg cursor-pointer text-white hover:underline py-2 rounded-md transition-all duration-200"
                                     >
                                         {item.name}
                                     </Link>
@@ -118,7 +118,7 @@ const NavBar = () => {
                         {/* Icons */}
                         <div className="flex justify-center items-center max-sm:flex-1 max-sm:justify-end cursor-pointer">
                             <div
-                                className="border border-gray-600 rounded-full px-10 py-1.5 hover:border-gray-400 max-sm:hidden transition-all duration-200 flex items-center space-x-2"
+                                className="border border-[#00509d] rounded-full px-10 py-1.5 hover:border-white max-sm:hidden transition-all duration-200 flex items-center space-x-2"
                                 onClick={() => setSearchBar(!searchBar)}
                             >
                                 <img
@@ -128,7 +128,7 @@ const NavBar = () => {
                                     height={16}
                                     className="opacity-80 hover:opacity-100 transition-opacity duration-200"
                                 />
-                                <span className="text-sm font-medium font-sans">
+                                <span className="text-sm font-medium font-sans text-white">
                                     Search
                                 </span>
                             </div>
@@ -141,25 +141,25 @@ const NavBar = () => {
                                         alt="profile"
                                         width={32}
                                         height={32}
-                                        className="mx-3 cursor-pointer rounded-full hover:ring-2 hover:ring-gray-400 transition-all duration-200"
+                                        className="mx-3 cursor-pointer rounded-full hover:ring-2 hover:ring-white transition-all duration-200"
                                         onClick={toggleDropdown}
                                         aria-expanded={isDropdownOpen}
                                         aria-haspopup="true"
                                     />
                                     {isDropdownOpen && (
-                                        <div className="absolute right-0 mt-3 w-56 bg-gray-900 border border-gray-700 rounded-lg shadow-xl z-50 transform transition-all duration-200 ease-in-out scale-95 opacity-0 animate-dropdown">
+                                        <div className="absolute right-0 mt-3 w-56 bg-[#00296b] border border-[#003f88] rounded-lg shadow-xl z-50 transform transition-all duration-200 ease-in-out scale-95 opacity-0 animate-dropdown">
                                             <div className="py-2">
-                                                <div className="px-4 py-3 border-b border-gray-900">
+                                                <div className="px-4 py-3 border-b border-[#003f88]">
                                                     <p className="text-lg font-medium text-center text-white">
                                                         {user?.username || "User"}
                                                     </p>
-                                                    <p className="text-sm pt-2 text-center text-gray-500 truncate">
+                                                    <p className="text-sm pt-2 text-center text-white truncate">
                                                         {user?.email || "user@example.com"}
                                                     </p>
                                                 </div>
                                                 <Link
                                                     to="/profile"
-                                                    className="px-4 py-2.5 text-sm text-gray-200 hover:bg-gray-800 hover:text-white transition-all duration-150 flex items-center space-x-2"
+                                                    className="px-4 py-2.5 text-sm text-white hover:bg-[#003f88] hover:text-white transition-all duration-150 flex items-center space-x-2"
                                                     onClick={closeDropdown}
                                                 >
                                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -169,7 +169,7 @@ const NavBar = () => {
                                                 </Link>
                                                 <button
                                                     onClick={handleLogout}
-                                                    className="block w-full text-left px-4 py-2.5 text-sm text-gray-200 hover:bg-gray-800 hover:text-white transition-all duration-150 flex items-center space-x-2"
+                                                    className="block w-full text-left px-4 py-2.5 text-sm text-white hover:bg-[#003f88] hover:text-white transition-all duration-150 flex items-center space-x-2"
                                                 >
                                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
@@ -184,13 +184,13 @@ const NavBar = () => {
                                 <div className="flex items-center max-sm:hidden">
                                     <Link
                                         to="/login"
-                                        className="mx-3 text-lg font-mono text-black bg-white hover:text-white hover:bg-gray-800 px-5 py-0.9 rounded-md transition-all duration-200"
+                                        className="mx-3 text-lg font-mono text-white bg-[#00509d] hover:bg-[#003f88] px-5 py-0.9 rounded-md transition-all duration-200"
                                     >
                                         Login
                                     </Link>
                                     <Link
                                         to="/register"
-                                        className="mx-3 text-lg text-black font-mono bg-white hover:text-white hover:bg-gray-800 px-3 py-0.9 rounded-md transition-all duration-200"
+                                        className="mx-3 text-lg font-mono text-white bg-[#00509d] hover:bg-[#003f88] px-3 py-0.9 rounded-md transition-all duration-200"
                                     >
                                         Register
                                     </Link>
@@ -200,7 +200,7 @@ const NavBar = () => {
                             {/* Favorites Icon */}
                             <div className="relative cursor-pointer" onClick={handleFavoritesClick}>
                                 <svg
-                                    className="w-6 h-6 mx-3 text-white hover:opacity-80 transition-opacity duration-200"
+                                    className="w-6 h-6 mx-3 text-white hover:text-[#ADD8E6] transition-opacity duration-200"
                                     aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
@@ -215,8 +215,8 @@ const NavBar = () => {
                                     />
                                 </svg>
                                 {isAuthenticated && (
-                                    <span className="absolute -top-2 -right-0 font-sans text-xs font-medium text-white bg-red-600 rounded-full px-2 py-0.5 shadow-md">
-                                      {favoritesCount > 0 ? favoritesCount  : 0}
+                                    <span className="absolute -top-2 -right-0 font-sans text-xs font-medium text-white bg-[#00509d] rounded-full px-2 py-0.5 shadow-md">
+                                        {favoritesCount > 0 ? favoritesCount : 0}
                                     </span>
                                 )}
                             </div>
@@ -231,11 +231,9 @@ const NavBar = () => {
                                     className="mx-3 hover:opacity-80 transition-opacity duration-200"
                                 />
                                 {isAuthenticated && (
-
-                                    <span className="absolute -top-2 -right-0 font-sans text-xs font-medium text-white bg-red-600 rounded-full px-2 py-0.5 shadow-md">
-                                        {cartItemCount > 0 ? cartItemCount  : 0}
+                                    <span className="absolute -top-2 -right-0 font-sans text-xs font-medium text-white bg-[#00509d] rounded-full px-2 py-0.5 shadow-md">
+                                        {cartItemCount > 0 ? cartItemCount : 0}
                                     </span>
-
                                 )}
                             </div>
 
@@ -246,7 +244,7 @@ const NavBar = () => {
                                     alt="menu"
                                     width={36}
                                     height={36}
-                                    className={`border border-gray-600 rounded-full hover:bg-gray-700 p-2 mb-3 mx-3 transform transition-transform duration-300 ${
+                                    className={`border border-[#00509d] rounded-full hover:bg-[#003f88] p-2 mb-3 mx-3 transform transition-transform duration-300 ${
                                         isMenuOpen ? "rotate-180" : ""
                                     }`}
                                 />
@@ -258,7 +256,7 @@ const NavBar = () => {
 
             {/* Mobile Menu */}
             <ul
-                className={`w-full fixed z-[100] sm:hidden bg-black overflow-hidden transition-all duration-500 ease-in-out transform ${
+                className={`w-full fixed z-[100] sm:hidden bg-[#00296b] overflow-hidden transition-all duration-500 ease-in-out transform ${
                     isMenuOpen
                         ? "min-h-screen translate-x-0 opacity-100"
                         : "max-h-0 -translate-x-full opacity-0"
@@ -269,14 +267,14 @@ const NavBar = () => {
                     placeholder="Search for products..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-11/12 mx-auto my-6 text-center text-white bg-gray-800 border border-gray-600 rounded-full py-2.5 focus:outline-none focus:ring-2 focus:ring-gray-400 placeholder-gray-400"
+                    className="w-11/12 mx-auto my-6 text-center text-white bg-[#003f88] border border-[#00509d] rounded-full py-2.5 focus:outline-none focus:ring-2 focus:ring-white placeholder-gray-400"
                 />
                 {navLists.map((item, i) => (
                     <li key={i} className="cursor-pointer" onClick={closeMenu}>
                         <div className="flex justify-between items-center">
                             <Link
                                 to={item.path}
-                                className="py-4 text-lg ml-6 font-sans font-medium cursor-pointer text-gray-200 hover:text-white transition-all duration-200"
+                                className="py-4 text-lg ml-6 font-sans font-medium cursor-pointer text-white hover:underline transition-all duration-200"
                             >
                                 {item.name}
                             </Link>
@@ -290,7 +288,7 @@ const NavBar = () => {
                                 />
                             </div>
                         </div>
-                        <hr className="border-[0.03px] border-gray-700 my-1 mx-4" />
+                        <hr className="border-[0.03px] border-[#003f88] my-1 mx-4" />
                     </li>
                 ))}
                 {/* Mobile Authentication Links */}
@@ -300,7 +298,7 @@ const NavBar = () => {
                             <div className="flex justify-between items-center">
                                 <Link
                                     to="/profile"
-                                    className="py-4 text-lg ml-6 font-sans font-medium cursor-pointer text-gray-200 hover:text-white transition-all duration-200"
+                                    className="py-4 text-lg ml-6 font-sans font-medium cursor-pointer text-white hover:underline transition-all duration-200"
                                 >
                                     Profile
                                 </Link>
@@ -314,11 +312,11 @@ const NavBar = () => {
                                     />
                                 </div>
                             </div>
-                            <hr className="border-[0.03px] border-gray-700 my-1 mx-4" />
+                            <hr className="border-[0.03px] border-[#003f88] my-1 mx-4" />
                         </li>
                         <li className="cursor-pointer" onClick={handleLogout}>
                             <div className="flex justify-between items-center">
-                                <span className="py-4 text-lg ml-6 font-sans font-medium cursor-pointer text-gray-200 hover:text-white transition-all duration-200">
+                                <span className="py-4 text-lg ml-6 font-sans font-medium cursor-pointer text-white hover:underline transition-all duration-200">
                                     Logout
                                 </span>
                                 <div>
@@ -331,7 +329,7 @@ const NavBar = () => {
                                     />
                                 </div>
                             </div>
-                            <hr className="border-[0.03px] border-gray-700 my-1 mx-4" />
+                            <hr className="border-[0.03px] border-[#003f88] my-1 mx-4" />
                         </li>
                     </>
                 ) : (
@@ -340,7 +338,7 @@ const NavBar = () => {
                             <div className="flex justify-between items-center">
                                 <Link
                                     to="/login"
-                                    className="py-4 text-lg ml-6 font-sans font-medium cursor-pointer text-gray-200 hover:text-white transition-all duration-200"
+                                    className="py-4 text-lg ml-6 font-sans font-medium cursor-pointer text-white hover:underline transition-all duration-200"
                                 >
                                     Login
                                 </Link>
@@ -354,13 +352,13 @@ const NavBar = () => {
                                     />
                                 </div>
                             </div>
-                            <hr className="border-[0.03px] border-gray-700 my-1 mx-4" />
+                            <hr className="border-[0.03px] border-[#003f88] my-1 mx-4" />
                         </li>
                         <li className="cursor-pointer" onClick={closeMenu}>
                             <div className="flex justify-between items-center">
                                 <Link
                                     to="/register"
-                                    className="py-4 text-lg ml-6 font-sans font-medium cursor-pointer text-gray-200 hover:text-white transition-all duration-200"
+                                    className="py-4 text-lg ml-6 font-sans font-medium cursor-pointer text-white hover:underline transition-all duration-200"
                                 >
                                     Register
                                 </Link>
@@ -374,14 +372,14 @@ const NavBar = () => {
                                     />
                                 </div>
                             </div>
-                            <hr className="border-[0.03px] border-gray-700 my-1 mx-4" />
+                            <hr className="border-[0.03px] border-[#003f88] my-1 mx-4" />
                         </li>
                     </>
                 )}
                 {/* Mobile Favorites Link */}
                 <li className="cursor-pointer" onClick={handleFavoritesClick}>
                     <div className="flex justify-between items-center">
-                        <span className="py-4 text-lg ml-6 font-sans font-medium cursor-pointer text-gray-200 hover:text-white transition-all duration-200">
+                        <span className="py-4 text-lg ml-6 font-sans font-medium cursor-pointer text-white hover:underline transition-all duration-200">
                             Favorites {isAuthenticated ? `(${favoritesCount})` : ''}
                         </span>
                         <div>
@@ -394,12 +392,12 @@ const NavBar = () => {
                             />
                         </div>
                     </div>
-                    <hr className="border-[0.03px] border-gray-700 my-1 mx-4" />
+                    <hr className="border-[0.03px] border-[#003f88] my-1 mx-4" />
                 </li>
                 {/* Mobile Cart Link */}
                 <li className="cursor-pointer" onClick={handleCartClick}>
                     <div className="flex justify-between items-center">
-                        <span className="py-4 text-lg ml-6 font-sans font-medium cursor-pointer text-gray-200 hover:text-white transition-all duration-200">
+                        <span className="py-4 text-lg ml-6 font-sans font-medium cursor-pointer text-white hover:underline transition-all duration-200">
                             Cart {isAuthenticated ? `(${cartItemCount})` : ''}
                         </span>
                         <div>
@@ -412,13 +410,13 @@ const NavBar = () => {
                             />
                         </div>
                     </div>
-                    <hr className="border-[0.03px] border-gray-700 my-1 mx-4" />
+                    <hr className="border-[0.03px] border-[#003f88] my-1 mx-4" />
                 </li>
             </ul>
 
             {/* Search Bar Overlay */}
             {searchBar && (
-                <div className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/70 backdrop-blur-sm">
+                <div className="fixed inset-0 z-[1000] flex items-center justify-center bg-[#00296b]/70 backdrop-blur-sm">
                     <div className="w-full max-w-4xl mx-4">
                         <form onSubmit={handleSearchSubmit} className="relative">
                             <input
@@ -426,7 +424,7 @@ const NavBar = () => {
                                 placeholder="Search for products..."
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
-                                className="border border-gray-600 w-full py-3 px-4 pr-12 rounded-full text-white bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-400 placeholder-gray-400 shadow-md"
+                                className="border border-[#00509d] w-full py-3 px-4 pr-12 rounded-full text-white bg-[#003f88] focus:outline-none focus:ring-2 focus:ring-white placeholder-gray-400 shadow-md"
                                 autoFocus
                             />
                             <button
@@ -449,7 +447,6 @@ const NavBar = () => {
                         width={40}
                         height={40}
                         className="absolute top-4 right-4 cursor-pointer hover:opacity-80 transition-opacity duration-200"
-                        onClick={() => setSearchBar(false)}
                     />
                 </div>
             )}

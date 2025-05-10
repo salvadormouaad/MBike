@@ -19,9 +19,9 @@ const AdminDashboard = () => {
         stock: '',
         categoryId: '',
         type: '',
-        size: '',
-        brand: '',
-        color: '',
+        // size: '',
+        // brand: '',
+        // color: '',
         image: null,
     });
     const [newUser, setNewUser] = useState({
@@ -342,7 +342,7 @@ const AdminDashboard = () => {
                                             type="text"
                                             value={newProduct.type}
                                             onChange={(e) => setNewProduct({ ...newProduct, type: e.target.value })}
-                                            placeholder="e.g., Mountain Bike, Helmet"
+                                            placeholder="Zelige type"
                                             className="w-full p-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-700 transition-all"
                                         />
                                     </div>
@@ -358,7 +358,7 @@ const AdminDashboard = () => {
                                             className="w-full p-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-700 transition-all"
                                         />
                                     </div>
-                                    <div>
+                                    {/* <div>
                                         <label className="block text-sm font-medium text-gray-200 mb-2">
                                             Brand
                                         </label>
@@ -369,7 +369,7 @@ const AdminDashboard = () => {
                                             placeholder="Yamaha..."
                                             className="w-full p-3 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-700 transition-all"
                                         />
-                                    </div>
+                                    </div> */}
                                     <div>
                                         <label className="block text-sm font-medium text-gray-200 mb-2">
                                             Color

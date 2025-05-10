@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import {
     selectProducts,
     selectProductsErrors,
@@ -7,9 +8,10 @@ import {
     selectProductsStatus
 } from "../selectors/ProductsSelectors.jsx";
 import { fetchProducts, resetFilters } from "../features/productsSlice.jsx";
-import {backendBaseUrl} from "../API/axios.js";
-import {fetchCategories} from "../features/categoriesSlice.jsx";
-import {addToCart} from "../features/cartSlice.jsx";
+import { backendBaseUrl } from "../api/axios.js";
+import { fetchCategories } from "../features/categoriesSlice.jsx";
+import { addToCart } from "../features/cartSlice.jsx";
+
 const ProductsGrid = () => {
     const dispatch = useDispatch();
     const products = useSelector(selectProducts);
@@ -400,18 +402,18 @@ const ProductsGrid = () => {
                         {products.map((product) => (
                             <div key={product.produitId} className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
                                 <div className="h-56 w-full">
-                                    <a href={`/products/${product.produitId}`}>
+                                    <Link to={`/product/${product.produitId}`}>
                                         <img
                                             className="mx-auto h-full object-contain"
-                                            src={backendBaseUrl+product.imageUrl}
+                                            src={backendBaseUrl + product.imageUrl}
                                             alt={product.nom}
                                         />
-                                    </a>
+                                    </Link>
                                 </div>
                                 <div className="pt-6">
-                                    <a href={`/products/${product.produitId}`} className="text-lg font-semibold leading-tight text-gray-900 hover:underline">
+                                    <Link to={`/product/${product.produitId}`} className="text-lg font-semibold leading-tight text-gray-900 hover:underline">
                                         {product.nom}
-                                    </a>
+                                    </Link>
 
                                     <div className="mt-4 flex items-center justify-between gap-4">
                                         <div>

@@ -1,13 +1,13 @@
 export const navLists = [
     { name: "Home", path: "/" },
-    { name: "Bikes", path: "/bikes" },
+    { name: "Zelige", path: "/bikes" },
     { name: "Gear", path: "/gears" },
     { name: "Shop", path: "/Store" },
     { name: "About", path: "/about" },
 ];
 
 import react from "../assets/images/react.svg";
-import hero from "../assets/images/bike background 2.png";
+import hero from "../assets/images/Leonardo_Phoenix_10_create_a_highly_realistic_image_of_a_tradi_0.jpeg";
 import bag from "../assets/images/bag.svg";
 import search from "../assets/images/search.svg";
 import profile from "../assets/images/profile.svg";

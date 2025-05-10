@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { fetchProducts } from "../../features/productsSlice.jsx";
-import { backendBaseUrl } from "../../API/axios.js";
+import { backendBaseUrl } from "../../api/axios.js";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";

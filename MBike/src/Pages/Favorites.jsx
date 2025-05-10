@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { removeFromFavorites } from "../features/favoritesSlice";
 import { addToCart } from "../features/cartSlice";
-import {backendBaseUrl} from "../API/axios.js";
+import {backendBaseUrl} from "../api/axios.js";
 
 const Favorites = () => {
     const dispatch = useDispatch();

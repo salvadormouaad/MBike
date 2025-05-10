@@ -1,5 +1,5 @@
 import React from 'react';
-import Agree1 from '../../assets/BikesPic/Agree1.jpg';
+import Agree1 from '../../assets/BikesPic/vue-de-l-arc-3d-avec-motif-islamique.jpg';
 
 const BikeAboutTown = () => {
     return (
@@ -21,27 +21,25 @@ const BikeAboutTown = () => {
                 {/* Text Section */}
                 <div className="lg:w-1/2 space-y-10">
                     <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight uppercase text-gray-200">
-                        Mbike Elite
+                        Zelige
                     </h1>
 
                     <p className="text-lg md:text-2xl font-light leading-relaxed text-gray-400 max-w-prose">
-                        Welcome to Mbike, where cycling is elevated to an art form. We cater to the discerning rider—whether you’re carving through rugged trails, navigating city streets with grace, or exploring boundless gravel paths on cutting-edge e-bikes. Our relentless pursuit of excellence ensures that every bike, accessory, and piece of gear we offer is a masterpiece, sourced from the world’s most revered brands. Expect nothing less than precision engineering, timeless design, and unparalleled performance.
-                    </p>
+Welcome to Zelige Marocain, where Moroccan artistry is elevated to an exquisite craft. We cater to the discerning admirer—whether you’re adorning your home with intricate zellige tiles, enhancing spaces with vibrant mosaics, or embracing the timeless beauty of handcrafted ceramics. Our relentless pursuit of excellence ensures that every tile, pattern, and piece we offer is a masterpiece, sourced from Morocco’s most revered artisans. Expect nothing less than meticulous craftsmanship, authentic design, and unparalleled elegance.                    </p>
 
                     {/* Additional Text */}
                     <p className="text-md md:text-lg font-light leading-relaxed text-gray-500 max-w-prose">
-                        Founded by visionaries with a deep love for the craft, Mbike isn’t just a brand—it’s a legacy. For over a decade, we’ve redefined what it means to ride, blending innovation with tradition. Our curated collections are more than products; they’re tools for self-expression, built for those who demand the best. From lightweight frames to bespoke components, every detail reflects our commitment to quality and sophistication.
-                    </p>
+Founded by visionaries with a deep love for Moroccan artistry, Zelige Marocain isn’t just a brand—it’s a legacy. For over a decade, we’ve redefined what it means to create, blending traditional techniques with modern innovation. Our curated collections are more than products; they’re expressions of heritage, crafted for those who demand the finest. From intricate zellige tiles to bespoke ceramics, every detail reflects our commitment to authenticity and sophistication.                    </p>
 
                     {/* Specs Grid */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div className="bg-gray-900/50 p-6 rounded-xl backdrop-blur-md border border-gray-800 hover:border-gray-600 transition-colors duration-300 ease-in-out">
-                            <h3 className="text-xl font-semibold text-gray-300">Frame Material</h3>
-                            <p className="text-gray-500">Superlite Aluminum</p>
+                            <h3 className="text-xl font-semibold text-gray-300">Tile Material</h3>
+                            <p className="text-gray-500">Handcrafted Moroccan Clay</p>
                         </div>
                         <div className="bg-gray-900/50 p-6 rounded-xl backdrop-blur-md border border-gray-800 hover:border-gray-600 transition-colors duration-300 ease-in-out">
-                            <h3 className="text-xl font-semibold text-gray-300">Tire Clearance</h3>
-                            <p className="text-gray-500">58 mm</p>
+                            <h3 className="text-xl font-semibold text-gray-300">Pattern Style</h3>
+                            <p className="text-gray-500">Traditional Zellige Mosaic</p>
                         </div>
                     </div>
                 </div>

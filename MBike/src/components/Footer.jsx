@@ -51,7 +51,7 @@ const Footer = memo(() => {
     // Navigation links array for better maintainability
     const navLinks = [
         { to: "/", text: "Home" },
-        { to: "/gears", text: "Gears" },
+        { to: "/gears", text: "Zelige" },
         { to: "/contact-us", text: "Contact Us" },
         { to: "/about", text: "About Us" },
     ];
@@ -59,24 +59,24 @@ const Footer = memo(() => {
     return (
         <footer
             ref={footerRef}
-            className="relative bg-black text-white py-8 px-4"
+            className="relative bg-[#00296b] text-white py-8 px-4"
         >
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
                 <div className="footer-brand mb-6 md:mb-0 text-center md:text-left pl-5">
                     <h2 className="text-3xl font-bold font-[Gopher]">
-                        <Link to="/">MBike</Link>
+                        <Link to="/">zlige</Link>
                     </h2>
-                    <p className="text-gray-400 mt-2 font-[Gopher]">
+                    <p className="text-[#ADD8E6] mt-2 font-[Gopher]">
                         Power and Precision
                     </p>
                 </div>
 
-                <ul className="flex space-x-6 text-lg text-gray-400">
+                <ul className="flex space-x-6 text-lg text-white">
                     {navLinks.map(({ to, text }) => (
                         <li key={to} className="nav-link">
                             <Link
                                 to={to}
-                                className="hover:text-white hover:underline transition font-[Gopher]"
+                                className="hover:text-[#ADD8E6] hover:underline transition font-[Gopher]"
                             >
                                 {text}
                             </Link>
@@ -87,21 +87,21 @@ const Footer = memo(() => {
                 <div className="flex space-x-4 mt-6 md:mt-0">
                     <a
                         href="#"
-                        className="social-link text-gray-400 hover:text-blue-500 transition text-2xl"
+                        className="social-link text-white hover:text-[#00509d] transition text-2xl"
                         aria-label="Facebook"
                     >
                         <FaFacebookF />
                     </a>
                     <a
                         href="#"
-                        className="social-link text-gray-400 hover:text-white transition text-2xl"
+                        className="social-link text-white hover:text-[#00509d] transition text-2xl"
                         aria-label="Twitter"
                     >
                         <BsTwitterX />
                     </a>
                     <a
                         href="#"
-                        className="social-link text-gray-400 hover:text-pink-500 transition text-2xl"
+                        className="social-link text-white hover:text-[#00509d] transition text-2xl"
                         aria-label="Instagram"
                     >
                         <FaInstagram />
@@ -109,12 +109,12 @@ const Footer = memo(() => {
                 </div>
             </div>
 
-            <div className="mt-8 text-center text-gray-500 text-sm font-[Gopher]">
+            <div className="mt-8 text-center text-white text-sm font-[Gopher]">
                 © {new Date().getFullYear()} MBike. All rights reserved.
             </div>
 
-            {/* Using pseudo-element instead of extra div */}
-            <style >{`
+            {/* Using pseudo-element for divider */}
+            <style jsx>{`
                 footer::after {
                     content: '';
                     position: absolute;
@@ -122,7 +122,7 @@ const Footer = memo(() => {
                     left: 0;
                     right: 0;
                     height: 1px;
-                    background: linear-gradient(to right, #000000, #ffffff, #000000);
+                    background: #003f88;
                 }
             `}</style>
         </footer>
