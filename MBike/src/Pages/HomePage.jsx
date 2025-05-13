@@ -26,7 +26,7 @@ export const HomePage = () => {
              <Section_zelige2/>
             <Section_zelige3 />
             <Section_zelige4 />
-            <TrustedBrands />
+            {/* <TrustedBrands /> */}
         </div>
     );
 };

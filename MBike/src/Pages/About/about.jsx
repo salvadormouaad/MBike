@@ -32,16 +32,7 @@ Welcome to Zelige Marocain, where Moroccan artistry is elevated to an exquisite 
 Founded by visionaries with a deep love for Moroccan artistry, Zelige Marocain isn’t just a brand—it’s a legacy. For over a decade, we’ve redefined what it means to create, blending traditional techniques with modern innovation. Our curated collections are more than products; they’re expressions of heritage, crafted for those who demand the finest. From intricate zellige tiles to bespoke ceramics, every detail reflects our commitment to authenticity and sophistication.                    </p>
 
                     {/* Specs Grid */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div className="bg-gray-900/50 p-6 rounded-xl backdrop-blur-md border border-gray-800 hover:border-gray-600 transition-colors duration-300 ease-in-out">
-                            <h3 className="text-xl font-semibold text-gray-300">Tile Material</h3>
-                            <p className="text-gray-500">Handcrafted Moroccan Clay</p>
-                        </div>
-                        <div className="bg-gray-900/50 p-6 rounded-xl backdrop-blur-md border border-gray-800 hover:border-gray-600 transition-colors duration-300 ease-in-out">
-                            <h3 className="text-xl font-semibold text-gray-300">Pattern Style</h3>
-                            <p className="text-gray-500">Traditional Zellige Mosaic</p>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
 
